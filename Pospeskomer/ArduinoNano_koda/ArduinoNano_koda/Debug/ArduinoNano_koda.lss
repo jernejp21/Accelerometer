@@ -1,0 +1,133 @@
+
+ArduinoNano_koda.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000009c  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .comment      00000030  00000000  00000000  000000f0  2**0
+                  CONTENTS, READONLY
+  2 .debug_aranges 00000030  00000000  00000000  00000120  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  3 .debug_info   0000013a  00000000  00000000  00000150  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_abbrev 000000dd  00000000  00000000  0000028a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_line   00000481  00000000  00000000  00000367  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_frame  00000044  00000000  00000000  000007e8  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_str    0000dcf3  00000000  00000000  0000082c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_ranges 00000020  00000000  00000000  0000e51f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_macro  00000347  00000000  00000000  0000e53f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	33 c0       	rjmp	.+102    	; 0x68 <__ctors_end>
+   2:	00 00       	nop
+   4:	39 c0       	rjmp	.+114    	; 0x78 <__bad_interrupt>
+   6:	00 00       	nop
+   8:	37 c0       	rjmp	.+110    	; 0x78 <__bad_interrupt>
+   a:	00 00       	nop
+   c:	35 c0       	rjmp	.+106    	; 0x78 <__bad_interrupt>
+   e:	00 00       	nop
+  10:	33 c0       	rjmp	.+102    	; 0x78 <__bad_interrupt>
+  12:	00 00       	nop
+  14:	31 c0       	rjmp	.+98     	; 0x78 <__bad_interrupt>
+  16:	00 00       	nop
+  18:	2f c0       	rjmp	.+94     	; 0x78 <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	2d c0       	rjmp	.+90     	; 0x78 <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	2b c0       	rjmp	.+86     	; 0x78 <__bad_interrupt>
+  22:	00 00       	nop
+  24:	29 c0       	rjmp	.+82     	; 0x78 <__bad_interrupt>
+  26:	00 00       	nop
+  28:	27 c0       	rjmp	.+78     	; 0x78 <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	25 c0       	rjmp	.+74     	; 0x78 <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	23 c0       	rjmp	.+70     	; 0x78 <__bad_interrupt>
+  32:	00 00       	nop
+  34:	21 c0       	rjmp	.+66     	; 0x78 <__bad_interrupt>
+  36:	00 00       	nop
+  38:	1f c0       	rjmp	.+62     	; 0x78 <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	1d c0       	rjmp	.+58     	; 0x78 <__bad_interrupt>
+  3e:	00 00       	nop
+  40:	1b c0       	rjmp	.+54     	; 0x78 <__bad_interrupt>
+  42:	00 00       	nop
+  44:	19 c0       	rjmp	.+50     	; 0x78 <__bad_interrupt>
+  46:	00 00       	nop
+  48:	17 c0       	rjmp	.+46     	; 0x78 <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	15 c0       	rjmp	.+42     	; 0x78 <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	13 c0       	rjmp	.+38     	; 0x78 <__bad_interrupt>
+  52:	00 00       	nop
+  54:	11 c0       	rjmp	.+34     	; 0x78 <__bad_interrupt>
+  56:	00 00       	nop
+  58:	0f c0       	rjmp	.+30     	; 0x78 <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	0d c0       	rjmp	.+26     	; 0x78 <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	0b c0       	rjmp	.+22     	; 0x78 <__bad_interrupt>
+  62:	00 00       	nop
+  64:	09 c0       	rjmp	.+18     	; 0x78 <__bad_interrupt>
+	...
+
+00000068 <__ctors_end>:
+  68:	11 24       	eor	r1, r1
+  6a:	1f be       	out	0x3f, r1	; 63
+  6c:	cf ef       	ldi	r28, 0xFF	; 255
+  6e:	d8 e0       	ldi	r29, 0x08	; 8
+  70:	de bf       	out	0x3e, r29	; 62
+  72:	cd bf       	out	0x3d, r28	; 61
+  74:	02 d0       	rcall	.+4      	; 0x7a <main>
+  76:	10 c0       	rjmp	.+32     	; 0x98 <_exit>
+
+00000078 <__bad_interrupt>:
+  78:	c3 cf       	rjmp	.-122    	; 0x0 <__vectors>
+
+0000007a <main>:
+#include "Serial.h"
+
+int main (void)
+{
+	// Initialization code
+	DDRB |= (1<<PB5);
+  7a:	25 9a       	sbi	0x04, 5	; 4
+
+	while(1)
+	{
+		PORTB ^= (1<<PB5);
+  7c:	90 e2       	ldi	r25, 0x20	; 32
+  7e:	85 b1       	in	r24, 0x05	; 5
+  80:	89 27       	eor	r24, r25
+  82:	85 b9       	out	0x05, r24	; 5
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+  84:	2f ef       	ldi	r18, 0xFF	; 255
+  86:	31 ee       	ldi	r19, 0xE1	; 225
+  88:	84 e0       	ldi	r24, 0x04	; 4
+  8a:	21 50       	subi	r18, 0x01	; 1
+  8c:	30 40       	sbci	r19, 0x00	; 0
+  8e:	80 40       	sbci	r24, 0x00	; 0
+  90:	e1 f7       	brne	.-8      	; 0x8a <main+0x10>
+  92:	00 c0       	rjmp	.+0      	; 0x94 <main+0x1a>
+  94:	00 00       	nop
+  96:	f3 cf       	rjmp	.-26     	; 0x7e <main+0x4>
+
+00000098 <_exit>:
+  98:	f8 94       	cli
+
+0000009a <__stop_program>:
+  9a:	ff cf       	rjmp	.-2      	; 0x9a <__stop_program>
