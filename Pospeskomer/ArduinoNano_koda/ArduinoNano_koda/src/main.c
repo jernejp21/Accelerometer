@@ -36,15 +36,26 @@
 #include <util/setbaud.h>
 #include "Serial.h"
 
+
+
+
 int main (void)
 {
 	// Initialization code
-	DDRB |= (1<<PB5);
+	//DDRB |= (1<<PB5);
+	SPI_MasterInit();
+	//SPI_SlaveInit();
+	Serial_begin();
 
 	while(1)
 	{
-		PORTB ^= (1<<PB5);
-		_delay_ms(100);
+		//PORTB ^= (1<<PB5);
+		//_delay_ms(100);
+		
+		SPI_MasterTransmit('a');
+		
+		//char test = SPI_SlaveReceive();
+		//Serial_write(test);
 		
 	}
 

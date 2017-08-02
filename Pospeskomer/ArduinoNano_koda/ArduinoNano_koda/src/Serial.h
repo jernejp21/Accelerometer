@@ -20,7 +20,6 @@
 
   PAY ATTENTION!
 
-  - This library is still missing SPI module.
   - This library is made for atmega328p, so far.
 */
 
@@ -30,24 +29,62 @@
 #define Serial_h
 #endif
 
+void SPI_MasterInit(void);
+void SPI_MasterTransmit(const char cData);
+inline void SPI_SlaveInit(void);
+inline char SPI_SlaveReceive(void);
 void I2C_Begin(void);
 inline void I2C_Transmit(const uint8_t slave_address, const uint8_t reg_address, const uint8_t data);
 inline uint8_t I2C_Read_one(const uint8_t slave_address, const uint8_t reg_address);
 inline void I2C_Read_array(const uint8_t slave_address, const uint8_t reg_address, const uint8_t len, uint8_t *arrayp);
 void Serial_begin(void);
-inline void Serial_write(const uint8_t);
+inline void Serial_write(const uint8_t data);
 inline char Serial_read(void);
 
 
 #define I2C_WRITE 0
 #define I2C_READ 1
+#define MOSI	3
+#define SCK		5
+#define MISO	4
+#define SS		2
+
+void SPI_MasterInit(void)
+{
+	/* Set MOSI and SCK output, all others input */
+	DDRB = (1<<MOSI)|(1<<SCK)|(1<<SS);
+	/* Enable SPI, Master, set clock rate fck/16 */
+	SPCR = (1<<SPE)|(1<<MSTR)|(1<<SPR0);
+}
+
+void SPI_MasterTransmit(char cData)
+{
+	/* Start transmission */
+	SPDR = cData;
+	/* Wait for transmission complete */
+	while(!(SPSR & (1<<SPIF)));
+}
+
+void SPI_SlaveInit(void)
+{
+	/* Set MISO output, all others input */
+	DDRB = (1<<MISO);
+	/* Enable SPI */
+	SPCR = (1<<SPE);
+}
+char SPI_SlaveReceive(void)
+{
+	/* Wait for reception complete */
+	while(!(SPSR & (1<<SPIF)));
+	/* Return Data Register */
+	return SPDR;
+}
 
 void I2C_Begin(void)
 {
     TWBR = 0x0C;
     TWSR |= 0x03;
 }
-
 
 inline void I2C_Transmit(const uint8_t slave_address, const uint8_t reg_address, const uint8_t data)
 {
@@ -80,6 +117,7 @@ inline void I2C_Transmit(const uint8_t slave_address, const uint8_t reg_address,
     /**stop signal*/
     TWCR = (1<<TWINT)|(1<<TWEN)|(1<<TWSTO);
 }
+
 inline uint8_t I2C_Read_one(const uint8_t slave_address, const uint8_t reg_address)
 {
     /**start signal*/
@@ -125,7 +163,6 @@ inline uint8_t I2C_Read_one(const uint8_t slave_address, const uint8_t reg_addre
 
     return TWDR;
 }
-
 
 inline void I2C_Read_array(const uint8_t slave_address, const uint8_t reg_address, const uint8_t len, uint8_t *arrayp)
 {
