@@ -1,0 +1,12 @@
+.\objects\stm32l4xx_ll_utils.o: C:\Keil_v5\ARM\PACK\Keil\STM32L4xx_DFP\1.5.0\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_ll_utils.c
+.\objects\stm32l4xx_ll_utils.o: C:\Keil_v5\ARM\PACK\Keil\STM32L4xx_DFP\1.5.0\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_ll_utils.h
+.\objects\stm32l4xx_ll_utils.o: C:\Keil_v5\ARM\PACK\Keil\STM32L4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include\stm32l4xx.h
+.\objects\stm32l4xx_ll_utils.o: C:\Keil_v5\ARM\PACK\Keil\STM32L4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include\stm32l476xx.h
+.\objects\stm32l4xx_ll_utils.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h
+.\objects\stm32l4xx_ll_utils.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\stm32l4xx_ll_utils.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h
+.\objects\stm32l4xx_ll_utils.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h
+.\objects\stm32l4xx_ll_utils.o: C:\Keil_v5\ARM\PACK\Keil\STM32L4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include\system_stm32l4xx.h
+.\objects\stm32l4xx_ll_utils.o: C:\Keil_v5\ARM\PACK\Keil\STM32L4xx_DFP\1.5.0\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_ll_rcc.h
+.\objects\stm32l4xx_ll_utils.o: C:\Keil_v5\ARM\PACK\Keil\STM32L4xx_DFP\1.5.0\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_ll_system.h
+.\objects\stm32l4xx_ll_utils.o: C:\Keil_v5\ARM\PACK\Keil\STM32L4xx_DFP\1.5.0\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_ll_pwr.h
