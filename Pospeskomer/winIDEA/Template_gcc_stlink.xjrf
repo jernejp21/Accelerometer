@@ -44,292 +44,292 @@
       </History>
       <PI.0>
        <Bookmarks_num_>0</Bookmarks_num_>
-       <L>188</L>
-       <P>C:\Users\Jernej\Documents\Keil\RTE\Device\STM32L476RGTx\startup_stm32l476xx.s</P>
-       <VL>51</VL>
+       <L>465</L>
+       <P>C:\Keil_v5\ARM\PACK\Keil\STM32L4xx_DFP\1.5.0\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_gpio.c</P>
+       <VL>437</VL>
       </PI.0>
       <PI.1>
        <Bookmarks_num_>0</Bookmarks_num_>
-       <L>124</L>
+       <L>127</L>
        <P>..\Keil\RTE\Device\STM32L476RGTx\STCubeGenerated\Src\main.c</P>
-       <VL>72</VL>
+       <VL>127</VL>
       </PI.1>
       <PI.10>
        <Bookmarks_num_>0</Bookmarks_num_>
-       <P>D:\toolset\gcc\STM32F401_flash.ld</P>
+       <P>..\src\stm32l4xx_hal_msp.c</P>
+       <VL>63</VL>
       </PI.10>
       <PI.11>
+       <Bookmarks_num_>0</Bookmarks_num_>
+       <P>D:\toolset\gcc\STM32F401_flash.ld</P>
+      </PI.11>
+      <PI.12>
        <Bookmarks_num_>0</Bookmarks_num_>
        <L>79</L>
        <P>D:\toolset\gcc\startup_stm32f411xe.s</P>
        <VL>59</VL>
-      </PI.11>
-      <PI.12>
+      </PI.12>
+      <PI.13>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>46</C>
        <L>75</L>
        <P>D:\toolset\gcc\startup_stm32f401xe.s</P>
        <VL>59</VL>
-      </PI.12>
-      <PI.13>
-       <Bookmarks_num_>0</Bookmarks_num_>
-       <P>..\src\system_stm32f4xx.c</P>
-       <VL>486</VL>
       </PI.13>
       <PI.14>
        <Bookmarks_num_>0</Bookmarks_num_>
-       <P>..\src\readme.txt</P>
+       <P>..\src\system_stm32f4xx.c</P>
+       <VL>486</VL>
       </PI.14>
       <PI.15>
+       <Bookmarks_num_>0</Bookmarks_num_>
+       <P>..\src\readme.txt</P>
+      </PI.15>
+      <PI.16>
        <Bookmarks_num_>0</Bookmarks_num_>
        <L>68</L>
        <P>D:\hal\CMSIS\ST\STM32F4xx\Source\Startup\gcc\startup_stm32f4xx.s</P>
        <VL>48</VL>
-      </PI.15>
-      <PI.16>
+      </PI.16>
+      <PI.17>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>58</C>
        <L>4</L>
        <P>D:\toolset\gcc\stm32_flash.ld</P>
-      </PI.16>
-      <PI.17>
+      </PI.17>
+      <PI.18>
        <Bookmarks_num_>0</Bookmarks_num_>
        <L>68</L>
        <P>..\..\Lib\CMSIS\ST\STM32F4xx\Source\Startup\gcc\startup_stm32f4xx.s</P>
        <VL>55</VL>
-      </PI.17>
-      <PI.18>
-       <Bookmarks_num_>0</Bookmarks_num_>
-       <P>..\..\Lib\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_exti.c</P>
-       <VL>192</VL>
       </PI.18>
       <PI.19>
        <Bookmarks_num_>0</Bookmarks_num_>
-       <P>..\src\stm32f4_discovery.c</P>
+       <P>..\..\Lib\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_exti.c</P>
        <VL>192</VL>
       </PI.19>
       <PI.2>
        <Bookmarks_num_>0</Bookmarks_num_>
-       <L>904</L>
-       <P>C:\Keil_v5\ARM\PACK\Keil\STM32L4xx_DFP\1.5.0\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_spi.c</P>
-       <VL>884</VL>
+       <L>188</L>
+       <P>..\Keil\RTE\Device\STM32L476RGTx\startup_stm32l476xx.s</P>
+       <VL>168</VL>
       </PI.2>
       <PI.20>
        <Bookmarks_num_>0</Bookmarks_num_>
-       <P>..\..\Lib\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rcc.c</P>
-       <VL>390</VL>
+       <P>..\src\stm32f4_discovery.c</P>
+       <VL>192</VL>
       </PI.20>
       <PI.21>
        <Bookmarks_num_>0</Bookmarks_num_>
-       <C>5</C>
-       <P>stm32_flash.ld</P>
+       <P>..\..\Lib\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rcc.c</P>
+       <VL>390</VL>
       </PI.21>
       <PI.22>
+       <Bookmarks_num_>0</Bookmarks_num_>
+       <C>5</C>
+       <P>stm32_flash.ld</P>
+      </PI.22>
+      <PI.23>
        <Bookmarks_num_>0</Bookmarks_num_>
        <L>1893</L>
        <P>..\FreeRTOS_Source\tasks.c</P>
        <VL>1881</VL>
-      </PI.22>
-      <PI.23>
+      </PI.23>
+      <PI.24>
        <Bookmarks_num_>0</Bookmarks_num_>
        <L>37</L>
        <P>..\src\startup_stm32f4xx.s</P>
        <VL>37</VL>
-      </PI.23>
-      <PI.24>
+      </PI.24>
+      <PI.25>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>3</C>
        <L>152</L>
        <P>..\FreeRTOS_Source\list.c</P>
        <VL>145</VL>
-      </PI.24>
-      <PI.25>
+      </PI.25>
+      <PI.26>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>21</C>
        <L>212</L>
        <P>..\FreeRTOS_Source\timers.c</P>
        <VL>196</VL>
-      </PI.25>
-      <PI.26>
-       <Bookmarks_num_>0</Bookmarks_num_>
-       <L>56</L>
-       <P>..\src\stm32f4xx_it.c</P>
       </PI.26>
       <PI.27>
        <Bookmarks_num_>0</Bookmarks_num_>
-       <L>141</L>
-       <P>..\Utilities\STM32_EVAL\Common\lcd_log.c</P>
+       <L>56</L>
+       <P>..\src\stm32f4xx_it.c</P>
       </PI.27>
       <PI.28>
+       <Bookmarks_num_>0</Bookmarks_num_>
+       <L>141</L>
+       <P>..\Utilities\STM32_EVAL\Common\lcd_log.c</P>
+      </PI.28>
+      <PI.29>
        <Bookmarks_num_>0</Bookmarks_num_>
        <L>160</L>
        <P>..\FreeRTOS_Source\portable\MemMang\heap_1.c</P>
        <VL>147</VL>
-      </PI.28>
-      <PI.29>
-       <Bookmarks_num_>0</Bookmarks_num_>
-       <P>..\Utilities\STM32_EVAL\Common\lcd_log.h</P>
-       <VL>57</VL>
       </PI.29>
       <PI.3>
        <Bookmarks_num_>0</Bookmarks_num_>
-       <L>457</L>
-       <P>C:\Keil_v5\ARM\PACK\Keil\STM32L4xx_DFP\1.5.0\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_gpio.c</P>
-       <VL>437</VL>
+       <L>188</L>
+       <P>C:\Users\Jernej\Documents\Keil\RTE\Device\STM32L476RGTx\startup_stm32l476xx.s</P>
+       <VL>51</VL>
       </PI.3>
       <PI.30>
+       <Bookmarks_num_>0</Bookmarks_num_>
+       <P>..\Utilities\STM32_EVAL\Common\lcd_log.h</P>
+       <VL>57</VL>
+      </PI.30>
+      <PI.31>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>48</C>
        <L>341</L>
        <P>..\Utilities\STM32_EVAL\STM3240_41_G_EVAL\stm324xg_eval.h</P>
        <VL>322</VL>
-      </PI.30>
-      <PI.31>
+      </PI.31>
+      <PI.32>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>7</C>
        <P>stm32f4_flash.ind</P>
-      </PI.31>
-      <PI.32>
+      </PI.32>
+      <PI.33>
        <Bookmarks_num_>0</Bookmarks_num_>
        <L>323</L>
        <P>..\Utilities\STM32_EVAL\STM3240_41_G_EVAL\stm324xg_eval.c</P>
        <VL>311</VL>
-      </PI.32>
-      <PI.33>
+      </PI.33>
+      <PI.34>
        <Bookmarks_num_>0</Bookmarks_num_>
        <P>Debug\___Lnk.ind</P>
        <VL>42</VL>
-      </PI.33>
-      <PI.34>
+      </PI.34>
+      <PI.35>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>50</C>
        <L>48</L>
        <P>..\src\tiny_printf.c</P>
        <VL>39</VL>
-      </PI.34>
-      <PI.35>
+      </PI.35>
+      <PI.36>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>63</C>
        <L>864</L>
        <P>..\Utilities\STM32_EVAL\STM3240_41_G_EVAL\stm324xg_eval_audio_codec.c</P>
        <VL>849</VL>
-      </PI.35>
-      <PI.36>
-       <Bookmarks_num_>0</Bookmarks_num_>
-       <P>Link.bat</P>
       </PI.36>
       <PI.37>
+       <Bookmarks_num_>0</Bookmarks_num_>
+       <P>Link.bat</P>
+      </PI.37>
+      <PI.38>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>105</C>
        <L>5</L>
        <P>Compile.bat</P>
-      </PI.37>
-      <PI.38>
+      </PI.38>
+      <PI.39>
        <Bookmarks_num_>0</Bookmarks_num_>
        <P>Assemble.bat</P>
        <VL>5</VL>
-      </PI.38>
-      <PI.39>
+      </PI.39>
+      <PI.4>
+       <Bookmarks_num_>0</Bookmarks_num_>
+       <L>904</L>
+       <P>C:\Keil_v5\ARM\PACK\Keil\STM32L4xx_DFP\1.5.0\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_spi.c</P>
+       <VL>884</VL>
+      </PI.4>
+      <PI.40>
        <Bookmarks_num_>0</Bookmarks_num_>
        <L>85</L>
        <P>tcpip.h</P>
        <VL>80</VL>
-      </PI.39>
-      <PI.4>
-       <Bookmarks_num_>0</Bookmarks_num_>
-       <C>8</C>
-       <P>..\Keil\RTE\Device\STM32L476RGTx\STCubeGenerated\Src\stm32l4xx_hal_msp.c</P>
-      </PI.4>
-      <PI.40>
+      </PI.40>
+      <PI.41>
        <Bookmarks_num_>0</Bookmarks_num_>
        <L>600</L>
        <P>tcp.h</P>
        <VL>595</VL>
-      </PI.40>
-      <PI.41>
+      </PI.41>
+      <PI.42>
        <Bookmarks_num_>0</Bookmarks_num_>
        <L>604</L>
        <P>etharp.c</P>
        <VL>604</VL>
-      </PI.41>
-      <PI.42>
+      </PI.42>
+      <PI.43>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>39</C>
        <L>363</L>
        <P>udp.c</P>
        <VL>388</VL>
-      </PI.42>
-      <PI.43>
+      </PI.43>
+      <PI.44>
        <Bookmarks_num_>0</Bookmarks_num_>
        <L>76</L>
        <P>etharp.h</P>
        <VL>71</VL>
-      </PI.43>
-      <PI.44>
+      </PI.44>
+      <PI.45>
        <Bookmarks_num_>0</Bookmarks_num_>
        <L>458</L>
        <P>pbuf.c</P>
        <VL>436</VL>
-      </PI.44>
-      <PI.45>
+      </PI.45>
+      <PI.46>
        <Bookmarks_num_>0</Bookmarks_num_>
        <L>83</L>
        <P>ip_addr.c</P>
        <VL>57</VL>
-      </PI.45>
-      <PI.46>
+      </PI.46>
+      <PI.47>
        <Bookmarks_num_>0</Bookmarks_num_>
        <L>623</L>
        <P>ip.c</P>
        <VL>598</VL>
-      </PI.46>
-      <PI.47>
+      </PI.47>
+      <PI.48>
        <Bookmarks_num_>0</Bookmarks_num_>
        <L>651</L>
        <P>dhcp.c</P>
        <VL>633</VL>
-      </PI.47>
-      <PI.48>
+      </PI.48>
+      <PI.49>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>26</C>
        <L>264</L>
        <P>ethernetif.c</P>
        <VL>250</VL>
-      </PI.48>
-      <PI.49>
-       <Bookmarks_num_>0</Bookmarks_num_>
-       <L>73</L>
-       <P>stm32f4x7_eth_bsp.c</P>
-       <VL>57</VL>
       </PI.49>
       <PI.5>
+       <Bookmarks_num_>0</Bookmarks_num_>
+       <C>8</C>
+       <P>..\Keil\RTE\Device\STM32L476RGTx\STCubeGenerated\Src\stm32l4xx_hal_msp.c</P>
+      </PI.5>
+      <PI.6>
        <Bookmarks_num_>0</Bookmarks_num_>
        <L>304</L>
        <P>D:\hal\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal.c</P>
        <VL>223</VL>
-      </PI.5>
-      <PI.6>
+      </PI.6>
+      <PI.7>
        <Bookmarks_num_>0</Bookmarks_num_>
        <L>158</L>
        <P>..\src\stm32l4xx_it.c</P>
        <VL>133</VL>
-      </PI.6>
-      <PI.7>
+      </PI.7>
+      <PI.8>
        <Bookmarks_num_>0</Bookmarks_num_>
        <L>86</L>
        <P>..\src\main.c</P>
        <VL>86</VL>
-      </PI.7>
-      <PI.8>
+      </PI.8>
+      <PI.9>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>38</C>
        <L>4</L>
        <P>..\readme.txt</P>
-      </PI.8>
-      <PI.9>
-       <Bookmarks_num_>0</Bookmarks_num_>
-       <P>..\src\stm32l4xx_hal_msp.c</P>
-       <VL>63</VL>
       </PI.9>
      </REG_ROOT>
     </EditorOptions>
@@ -801,24 +801,32 @@
      <Documents.0>
       <ActiveDocument>
        <Maximized>True</Maximized>
-       <RelativeFileName>C:\Users\Jernej\Documents\Keil\RTE\Device\STM32L476RGTx\startup_stm32l476xx.s</RelativeFileName>
+       <RelativeFileName>..\Keil\RTE\Device\STM32L476RGTx\STCubeGenerated\Src\main.c</RelativeFileName>
       </ActiveDocument>
       <Editor.0>
        <FileBarIndex>0</FileBarIndex>
-       <RectPosBottom>287</RectPosBottom>
-       <RectPosLeft>26</RectPosLeft>
-       <RectPosRight>1310</RectPosRight>
-       <RectPosTop>26</RectPosTop>
-       <RelativeFileName>C:\Users\Jernej\Documents\Keil\RTE\Device\STM32L476RGTx\startup_stm32l476xx.s</RelativeFileName>
+       <RectPosBottom>516</RectPosBottom>
+       <RectPosLeft>50</RectPosLeft>
+       <RectPosRight>884</RectPosRight>
+       <RectPosTop>50</RectPosTop>
+       <RelativeFileName>C:\Keil_v5\ARM\PACK\Keil\STM32L4xx_DFP\1.5.0\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_gpio.c</RelativeFileName>
       </Editor.0>
       <Editor.1>
        <FileBarIndex>1</FileBarIndex>
+       <RectPosBottom>491</RectPosBottom>
+       <RectPosLeft>25</RectPosLeft>
+       <RectPosRight>681</RectPosRight>
+       <RectPosTop>25</RectPosTop>
+       <RelativeFileName>..\Keil\RTE\Device\STM32L476RGTx\startup_stm32l476xx.s</RelativeFileName>
+      </Editor.1>
+      <Editor.2>
+       <FileBarIndex>2</FileBarIndex>
        <RectPosBottom>479</RectPosBottom>
        <RectPosLeft>0</RectPosLeft>
        <RectPosRight>478</RectPosRight>
        <RectPosTop>0</RectPosTop>
        <RelativeFileName>..\Keil\RTE\Device\STM32L476RGTx\STCubeGenerated\Src\main.c</RelativeFileName>
-      </Editor.1>
+      </Editor.2>
       <EditorHistoryFile.0>
        <RelativeFileName>..\src\stm32l4xx_hal_msp.c</RelativeFileName>
       </EditorHistoryFile.0>
@@ -833,10 +841,10 @@
       </EditorHistoryFile.3>
      </Documents.0>
      <Progress>
-      <b>702</b>
-      <l>708</l>
-      <r>1212</r>
-      <t>338</t>
+      <b>687</b>
+      <l>588</l>
+      <r>1092</r>
+      <t>323</t>
      </Progress>
      <Watches>
       <ActiveWatchPane>2</ActiveWatchPane>
@@ -854,7 +862,7 @@
       </Misc.3>
       <WatchPane.2>
        <Watch.0>
-        <WatchName>bufferTX</WatchName>
+        <WatchName>RxSPIByte,x</WatchName>
         <ExpressionDisplay>
          <Color>0</Color>
          <ColorBack>8421376</ColorBack>
@@ -865,6 +873,30 @@
          <Scale>0</Scale>
         </ExpressionDisplay>
        </Watch.0>
+       <Watch.1>
+        <WatchName>TxSPIByte</WatchName>
+        <ExpressionDisplay>
+         <Color>0</Color>
+         <ColorBack>8421376</ColorBack>
+         <ColorText>0</ColorText>
+         <Enabled>0</Enabled>
+         <Hi type="D">100.0000000000000000</Hi>
+         <Lo type="D">0.0000000000000000</Lo>
+         <Scale>0</Scale>
+        </ExpressionDisplay>
+       </Watch.1>
+       <Watch.2>
+        <WatchName>vrednost</WatchName>
+        <ExpressionDisplay>
+         <Color>0</Color>
+         <ColorBack>8421376</ColorBack>
+         <ColorText>0</ColorText>
+         <Enabled>0</Enabled>
+         <Hi type="D">100.0000000000000000</Hi>
+         <Lo type="D">0.0000000000000000</Lo>
+         <Scale>0</Scale>
+        </ExpressionDisplay>
+       </Watch.2>
       </WatchPane.2>
      </Watches>
      <Watches2>
@@ -920,7 +952,7 @@
       <TypeOfWnd>-1</TypeOfWnd>
       <DockRect.0>
        <AreHorz>1</AreHorz>
-       <Percent>1385</Percent>
+       <Percent>1449</Percent>
        <Type>0</Type>
        <TypeOfWnd>-1</TypeOfWnd>
        <DockRect.0>
@@ -1066,19 +1098,19 @@
            <Width>0</Width>
           </Columns.0>
           <Columns.1>
-           <Pos type="D">20.0000000000000000</Pos>
+           <Pos type="D">19.8744769874477000</Pos>
            <Width>0</Width>
           </Columns.1>
           <Columns.2>
-           <Pos type="D">55.0000000000000000</Pos>
+           <Pos type="D">40.3765690376569070</Pos>
            <Width>0</Width>
           </Columns.2>
           <Columns.3>
-           <Pos type="D">70.0000000000000000</Pos>
+           <Pos type="D">52.5104602510460270</Pos>
            <Width>0</Width>
           </Columns.3>
           <Columns.4>
-           <Pos type="D">85.0000000000000000</Pos>
+           <Pos type="D">76.3598326359832670</Pos>
            <Width>0</Width>
           </Columns.4>
          </Data>
@@ -1105,15 +1137,15 @@
            <Width>0</Width>
           </Columns.1>
           <Columns.2>
-           <Pos type="D">55.0000000000000000</Pos>
+           <Pos type="D">42.7083333333333360</Pos>
            <Width>0</Width>
           </Columns.2>
           <Columns.3>
-           <Pos type="D">70.0000000000000000</Pos>
+           <Pos type="D">63.9583333333333360</Pos>
            <Width>0</Width>
           </Columns.3>
           <Columns.4>
-           <Pos type="D">85.0000000000000000</Pos>
+           <Pos type="D">77.2916666666666710</Pos>
            <Width>0</Width>
           </Columns.4>
          </Data>
@@ -1140,7 +1172,7 @@
       </DockRect.1>
       <DockRect.2>
        <AreHorz>1</AreHorz>
-       <Percent>530</Percent>
+       <Percent>226</Percent>
        <strTypeOfWnd>SFR</strTypeOfWnd>
        <Type>0</Type>
        <TypeOfWnd>12</TypeOfWnd>
@@ -1179,52 +1211,13 @@
          <ActionScript></ActionScript>
          <ActionScriptParams></ActionScriptParams>
          <ActionShow>False</ActionShow>
-         <Active>False</Active>
+         <Active>True</Active>
          <Condition></Condition>
          <Condition_Count>0</Condition_Count>
          <ConditionEnabled>False</ConditionEnabled>
-         <Name>&quot;..\src\main.c&quot;::49</Name>
+         <Name>&quot;..\Keil\RTE\Device\STM32L476RGTx\STCubeGenerated\Src\main.c&quot;::128</Name>
         </__>
        </BP.0>
-       <BP.1>
-        <__>
-         <ActionEnabled>False</ActionEnabled>
-         <ActionScript></ActionScript>
-         <ActionScriptParams></ActionScriptParams>
-         <ActionShow>False</ActionShow>
-         <Active>False</Active>
-         <Condition></Condition>
-         <Condition_Count>0</Condition_Count>
-         <ConditionEnabled>False</ConditionEnabled>
-         <Name>&quot;..\src\main.c&quot;::89</Name>
-        </__>
-       </BP.1>
-       <BP.2>
-        <__>
-         <ActionEnabled>False</ActionEnabled>
-         <ActionScript></ActionScript>
-         <ActionScriptParams></ActionScriptParams>
-         <ActionShow>False</ActionShow>
-         <Active>True</Active>
-         <Condition></Condition>
-         <Condition_Count>0</Condition_Count>
-         <ConditionEnabled>False</ConditionEnabled>
-         <Name>&quot;..\Keil\RTE\Device\STM32L476RGTx\STCubeGenerated\Src\main.c&quot;::125</Name>
-        </__>
-       </BP.2>
-       <BP.3>
-        <__>
-         <ActionEnabled>False</ActionEnabled>
-         <ActionScript></ActionScript>
-         <ActionScriptParams></ActionScriptParams>
-         <ActionShow>False</ActionShow>
-         <Active>True</Active>
-         <Condition></Condition>
-         <Condition_Count>0</Condition_Count>
-         <ConditionEnabled>False</ConditionEnabled>
-         <Name>&quot;..\Keil\RTE\Device\STM32L476RGTx\STCubeGenerated\Src\main.c&quot;::135</Name>
-        </__>
-       </BP.3>
       </Fetch>
      </Breakpoints>
      <CASETool>
@@ -1413,7 +1406,7 @@
        <BinaryDisplay>0</BinaryDisplay>
        <CharArraysAsString>1</CharArraysAsString>
        <CharDisplay>2</CharDisplay>
-       <DefaultHex>False</DefaultHex>
+       <DefaultHex>True</DefaultHex>
        <DePrefixFunctions>False</DePrefixFunctions>
        <DePrefixGlobals>False</DePrefixGlobals>
        <DePrefixLabels>False</DePrefixLabels>
@@ -1560,28 +1553,28 @@
        </ID.1>
        <ID.10>
         <Data.0>
-         <__>0x08000000</__>
+         <__>0x200006c4</__>
         </Data.0>
         <Data.1>
-         <__>0</__>
+         <__>0x08000000</__>
         </Data.1>
         <Data.2>
-         <__>0x200050E8</__>
+         <__>0</__>
         </Data.2>
         <Data.3>
-         <__>0x2000f7f4</__>
+         <__>0x200050E8</__>
         </Data.3>
         <Data.4>
-         <__>0x08007008</__>
+         <__>0x2000f7f4</__>
         </Data.4>
         <Data.5>
-         <__>0x08007094</__>
+         <__>0x08007008</__>
         </Data.5>
         <Data.6>
-         <__>0x8006510</__>
+         <__>0x08007094</__>
         </Data.6>
         <Data.7>
-         <__>0xfff80000</__>
+         <__>0x8006510</__>
         </Data.7>
        </ID.10>
        <ID.11>
@@ -1971,20 +1964,80 @@
       <SFR>
        <InitScript></InitScript>
        <GlobalState>
-        <Selected>TXDATA</Selected>
+        <Selected>I2C1</Selected>
         <Items.0>
          <__>
           <Name>STM32L476xE</Name>
           <Options>1</Options>
           <Items.0>
            <__>
-            <Name>Firewall</Name>
+            <Name>TIM2</Name>
             <Options>4</Options>
            </__>
           </Items.0>
           <Items.1>
            <__>
-            <Name>I2C1</Name>
+            <Name>TIM3</Name>
+            <Options>0</Options>
+           </__>
+          </Items.1>
+          <Items.10>
+           <__>
+            <Name>TIM7</Name>
+            <Options>0</Options>
+           </__>
+          </Items.10>
+          <Items.11>
+           <__>
+            <Name>LPTIM1</Name>
+            <Options>0</Options>
+           </__>
+          </Items.11>
+          <Items.12>
+           <__>
+            <Name>LPTIM2</Name>
+            <Options>0</Options>
+           </__>
+          </Items.12>
+          <Items.13>
+           <__>
+            <Name>USART1</Name>
+            <Options>0</Options>
+           </__>
+          </Items.13>
+          <Items.14>
+           <__>
+            <Name>USART2</Name>
+            <Options>0</Options>
+           </__>
+          </Items.14>
+          <Items.15>
+           <__>
+            <Name>USART3</Name>
+            <Options>0</Options>
+           </__>
+          </Items.15>
+          <Items.16>
+           <__>
+            <Name>UART4</Name>
+            <Options>0</Options>
+           </__>
+          </Items.16>
+          <Items.17>
+           <__>
+            <Name>UART5</Name>
+            <Options>0</Options>
+           </__>
+          </Items.17>
+          <Items.18>
+           <__>
+            <Name>LPUART1</Name>
+            <Options>0</Options>
+           </__>
+          </Items.18>
+          <Items.19>
+           <__>
+            <Name>SPI1</Name>
             <Options>1</Options>
             <Items.0>
              <__>
@@ -1998,197 +2051,173 @@
               <Options>0</Options>
              </__>
             </Items.1>
-            <Items.10>
-             <__>
-              <Name>TXDR</Name>
-              <Options>1</Options>
-              <Items.0>
-               <__>
-                <Name>TXDATA</Name>
-                <Options>4</Options>
-               </__>
-              </Items.0>
-             </__>
-            </Items.10>
             <Items.2>
              <__>
-              <Name>OAR1</Name>
+              <Name>SR</Name>
               <Options>0</Options>
              </__>
             </Items.2>
             <Items.3>
              <__>
-              <Name>OAR2</Name>
+              <Name>DR</Name>
               <Options>0</Options>
              </__>
             </Items.3>
             <Items.4>
              <__>
-              <Name>TIMINGR</Name>
+              <Name>CRCPR</Name>
               <Options>0</Options>
              </__>
             </Items.4>
             <Items.5>
              <__>
-              <Name>TIMEOUTR</Name>
+              <Name>RXCRCR</Name>
               <Options>0</Options>
              </__>
             </Items.5>
             <Items.6>
              <__>
-              <Name>ISR</Name>
+              <Name>TXCRCR</Name>
               <Options>0</Options>
              </__>
             </Items.6>
-            <Items.7>
-             <__>
-              <Name>ICR</Name>
-              <Options>0</Options>
-             </__>
-            </Items.7>
-            <Items.8>
-             <__>
-              <Name>PECR</Name>
-              <Options>0</Options>
-             </__>
-            </Items.8>
-            <Items.9>
-             <__>
-              <Name>RXDR</Name>
-              <Options>0</Options>
-             </__>
-            </Items.9>
            </__>
-          </Items.1>
-          <Items.10>
-           <__>
-            <Name>DFSDM</Name>
-            <Options>0</Options>
-           </__>
-          </Items.10>
-          <Items.11>
-           <__>
-            <Name>RNG</Name>
-            <Options>0</Options>
-           </__>
-          </Items.11>
-          <Items.12>
-           <__>
-            <Name>AES</Name>
-            <Options>0</Options>
-           </__>
-          </Items.12>
-          <Items.13>
-           <__>
-            <Name>ADC1</Name>
-            <Options>0</Options>
-           </__>
-          </Items.13>
-          <Items.14>
-           <__>
-            <Name>ADC2</Name>
-            <Options>0</Options>
-           </__>
-          </Items.14>
-          <Items.15>
-           <__>
-            <Name>ADC3</Name>
-            <Options>0</Options>
-           </__>
-          </Items.15>
-          <Items.16>
-           <__>
-            <Name>ADC123_Common</Name>
-            <Options>0</Options>
-           </__>
-          </Items.16>
-          <Items.17>
-           <__>
-            <Name>GPIOA</Name>
-            <Options>0</Options>
-           </__>
-          </Items.17>
-          <Items.18>
-           <__>
-            <Name>GPIOB</Name>
-            <Options>1</Options>
-            <Items.0>
-             <__>
-              <Name>MODER</Name>
-              <Options>4</Options>
-             </__>
-            </Items.0>
-            <Items.1>
-             <__>
-              <Name>OTYPER</Name>
-              <Options>0</Options>
-             </__>
-            </Items.1>
-            <Items.2>
-             <__>
-              <Name>OSPEEDR</Name>
-              <Options>0</Options>
-             </__>
-            </Items.2>
-            <Items.3>
-             <__>
-              <Name>PUPDR</Name>
-              <Options>0</Options>
-             </__>
-            </Items.3>
-            <Items.4>
-             <__>
-              <Name>IDR</Name>
-              <Options>0</Options>
-             </__>
-            </Items.4>
-           </__>
-          </Items.18>
+          </Items.19>
           <Items.2>
            <__>
-            <Name>I2C2</Name>
+            <Name>TIM4</Name>
             <Options>0</Options>
            </__>
           </Items.2>
+          <Items.20>
+           <__>
+            <Name>SPI2</Name>
+            <Options>0</Options>
+           </__>
+          </Items.20>
+          <Items.21>
+           <__>
+            <Name>SPI3</Name>
+            <Options>0</Options>
+           </__>
+          </Items.21>
+          <Items.22>
+           <__>
+            <Name>SDMMC</Name>
+            <Options>0</Options>
+           </__>
+          </Items.22>
+          <Items.23>
+           <__>
+            <Name>EXTI</Name>
+            <Options>0</Options>
+           </__>
+          </Items.23>
+          <Items.24>
+           <__>
+            <Name>VREF</Name>
+            <Options>0</Options>
+           </__>
+          </Items.24>
+          <Items.25>
+           <__>
+            <Name>CAN</Name>
+            <Options>0</Options>
+           </__>
+          </Items.25>
+          <Items.26>
+           <__>
+            <Name>RTC</Name>
+            <Options>0</Options>
+           </__>
+          </Items.26>
+          <Items.27>
+           <__>
+            <Name>OTG_FS_GLOBAL</Name>
+            <Options>0</Options>
+           </__>
+          </Items.27>
+          <Items.28>
+           <__>
+            <Name>OTG_FS_HOST</Name>
+            <Options>0</Options>
+           </__>
+          </Items.28>
+          <Items.29>
+           <__>
+            <Name>OTG_FS_DEVICE</Name>
+            <Options>0</Options>
+           </__>
+          </Items.29>
           <Items.3>
            <__>
-            <Name>I2C3</Name>
+            <Name>TIM5</Name>
             <Options>0</Options>
            </__>
           </Items.3>
+          <Items.30>
+           <__>
+            <Name>OTG_FS_PWRCLK</Name>
+            <Options>0</Options>
+           </__>
+          </Items.30>
+          <Items.31>
+           <__>
+            <Name>SWPMI1</Name>
+            <Options>0</Options>
+           </__>
+          </Items.31>
+          <Items.32>
+           <__>
+            <Name>OPAMP</Name>
+            <Options>0</Options>
+           </__>
+          </Items.32>
+          <Items.33>
+           <__>
+            <Name>FMC</Name>
+            <Options>0</Options>
+           </__>
+          </Items.33>
+          <Items.34>
+           <__>
+            <Name>NVIC</Name>
+            <Options>0</Options>
+           </__>
+          </Items.34>
           <Items.4>
            <__>
-            <Name>Flash</Name>
+            <Name>TIM15</Name>
             <Options>0</Options>
            </__>
           </Items.4>
           <Items.5>
            <__>
-            <Name>DBGMCU</Name>
+            <Name>TIM16</Name>
             <Options>0</Options>
            </__>
           </Items.5>
           <Items.6>
            <__>
-            <Name>QUADSPI</Name>
+            <Name>TIM17</Name>
             <Options>0</Options>
            </__>
           </Items.6>
           <Items.7>
            <__>
-            <Name>RCC</Name>
+            <Name>TIM1</Name>
             <Options>0</Options>
            </__>
           </Items.7>
           <Items.8>
            <__>
-            <Name>PWR</Name>
+            <Name>TIM8</Name>
             <Options>0</Options>
            </__>
           </Items.8>
           <Items.9>
            <__>
-            <Name>SYSCFG</Name>
+            <Name>TIM6</Name>
             <Options>0</Options>
            </__>
           </Items.9>

@@ -61,14 +61,16 @@ static void MX_SPI1_Init(void);
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
 
-void quickSendReceive8SPI(SPI_HandleTypeDef *hspi);
+uint8_t SPI_sprejmi_bajt(uint8_t data);
+void SPI_poslji_bajt(uint8_t naslov, uint8_t vrednost);
 
 /* USER CODE END PFP */
 
 /* USER CODE BEGIN 0 */
 
-uint8_t TxSPIByte;
+uint8_t TxSPIByte[2] = {0, 0};
 uint8_t RxSPIByte;
+
 
 /* USER CODE END 0 */
 
@@ -100,19 +102,16 @@ int main(void)
   MX_SPI1_Init();
 
   /* USER CODE BEGIN 2 */
-	uint8_t a = 0;
-	TxSPIByte = 0x04;
-	RxSPIByte = 0x04;
+  int i = 0;
 	
-	uint8_t bufferTX[2] = {4<<0, 0xAA};
-	uint8_t bufferRX[2] = {0xAA, 0x0A};
+	//inicializacija SPI baferja
+	for(i = 0; i < 2; i++){
+		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);	
+		RxSPIByte = SPI_sprejmi_bajt(0);
+		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
+	}
 	
-		/*HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
-		uint8_t bufferTX[2] = {0x04, 0x0A};
-		uint8_t bufferRX[2] = {0x21, 0x0A};
-		HAL_SPI_Transmit(&hspi1, bufferTX, 1, 100);
-		HAL_SPI_Receive(&hspi1, bufferRX, 2, 100);
-		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);*/
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -122,32 +121,14 @@ int main(void)
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
-		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
-		for(int i=0; i < 80; i++)
-		{
-			__asm("nop");
-		}
 		
-		bufferTX[0] = (uint8_t) 0x03;
-		bufferTX[1] = (uint8_t) 0xAA;
-		//quickSendReceive8SPI(&hspi1);
-		//HAL_SPI_Transmit(&hspi1, bufferTX, 2, 100);
-		HAL_SPI_Receive(&hspi1, bufferTX, 2, 100);
-		__asm("nop");
-		__asm("nop");
-		__asm("nop");
-		__asm("nop");
-		__asm("nop");
-		__asm("nop");
-		//LL_SPI_TransmitData8(SPI1, 0x04);
-		//LL_SPI_TransmitData8(SPI1, 0x00);
-		//SPI1_DR = 0x04;
-		//SPI1_DR = 0x00;
-		//a = SPI1_DR;
-		//a = LL_SPI_ReceiveData8(SPI1);
-		//HAL_SPI_Receive(&hspi1, bufferRX, 1, 100);
+		//sprejemanje podatkov iz dolocenega naslova
+		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
+		RxSPIByte = SPI_sprejmi_bajt(0x00);
 		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
 		
+		
+		SPI_poslji_bajt(0x01, 0x0F);
 
   }
   /* USER CODE END 3 */
@@ -279,15 +260,23 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 
-void quickSendReceive8SPI(SPI_HandleTypeDef *hspi){
+uint8_t SPI_sprejmi_bajt(uint8_t data)
+{
+	uint8_t buffer[10] = {0, 0};
+	buffer[0] = data;
+	HAL_SPI_Receive(&hspi1, buffer, 2, 1000);
+	
+	return buffer[1];
+}
 
-        while( !(    hspi->Instance->SR  & SPI_FLAG_TXE));
-    
-    *((__IO uint8_t *)&hspi->Instance->DR) =  TxSPIByte;                // force the SPI to transceive 8 bit
-		while( !(    hspi->Instance->SR  & SPI_FLAG_TXE));
-	while(  (    hspi->Instance->SR  & SPI_FLAG_BSY));
-	while(  (    hspi->Instance->SR  & SPI_FLAG_RXNE));
-	RxSPIByte = hspi->Instance->DR;                        // empty DR fifo, we only want the last byte
+void SPI_poslji_bajt(uint8_t naslov, uint8_t vrednost)
+{
+	uint8_t buffer[2] = {0, 0};
+	// Za pisanje v register je potrebno bit 5 postaviti na 1
+	buffer[0] = naslov | (1 << 5); //naslov
+	buffer[1] = vrednost; //vrednost
+	
+	HAL_SPI_Transmit(&hspi1, buffer, 2, 100);
 }
 
 /* USER CODE END 4 */

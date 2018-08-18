@@ -1,6 +1,7 @@
 --cpu=Cortex-M4.fp --branchpatch=sdcomp-29491-629360
 ".\objects\main.o"
 ".\objects\stm32l4xx_it.o"
+"C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Lib\ARM\arm_cortexM4lf_math.lib"
 ".\objects\stm32l4xx_hal.o"
 ".\objects\stm32l4xx_hal_cortex.o"
 ".\objects\stm32l4xx_hal_dma.o"
