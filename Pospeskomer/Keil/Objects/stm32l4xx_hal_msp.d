@@ -1,4 +1,4 @@
-.\objects\stm32l4xx_hal_msp.o: D:\Projekti\Pospeskomer\Keil\RTE\Device\STM32L476RGTx\STCubeGenerated\Src\stm32l4xx_hal_msp.c
+.\objects\stm32l4xx_hal_msp.o: D:\projekti\Pospeskomer\Keil\RTE\Device\STM32L476RGTx\STCubeGenerated\Src\stm32l4xx_hal_msp.c
 .\objects\stm32l4xx_hal_msp.o: C:\Keil_v5\ARM\PACK\Keil\STM32L4xx_DFP\1.5.0\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal.h
 .\objects\stm32l4xx_hal_msp.o: .\RTE\Device\STM32L476RGTx\STCubeGenerated\Inc\stm32l4xx_hal_conf.h
 .\objects\stm32l4xx_hal_msp.o: .\RTE\Device\STM32L476RGTx\STCubeGenerated\Inc\main.h

@@ -379,9 +379,6 @@
       </TargetOption>
       <Groups>
         <Group>
-          <GroupName>Source Group 1</GroupName>
-        </Group>
-        <Group>
           <GroupName>:STM32CubeMX:Common Sources</GroupName>
           <Files>
             <File>

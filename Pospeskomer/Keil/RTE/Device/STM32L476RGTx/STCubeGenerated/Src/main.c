@@ -63,13 +63,17 @@ static void MX_SPI1_Init(void);
 
 uint8_t SPI_sprejmi_bajt(uint8_t data);
 void SPI_poslji_bajt(uint8_t naslov, uint8_t vrednost);
+void sprejmiRadio(void);
+void posljiRadio(void);
 
 /* USER CODE END PFP */
 
 /* USER CODE BEGIN 0 */
 
-uint8_t TxSPIByte[2] = {0, 0};
-uint8_t RxSPIByte;
+uint8_t TxSPI[6] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
+uint8_t RxSPI[6] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
+
+uint8_t test[33];
 
 
 /* USER CODE END 0 */
@@ -104,14 +108,111 @@ int main(void)
   /* USER CODE BEGIN 2 */
   int i = 0;
 	
-	//inicializacija SPI baferja
-	for(i = 0; i < 2; i++){
-		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);	
-		RxSPIByte = SPI_sprejmi_bajt(0);
-		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
-	}
+	// Nastavi RX naslov za 0. pipo
+	//LSBajt gre prvi
+	TxSPI[0] = 0x0A | (1 << 5);
+	TxSPI[1] = 0xE1;
+	TxSPI[2] = 0xF0;
+	TxSPI[3] = 0xF0;
+	TxSPI[4] = 0xE8;
+	TxSPI[5] = 0xE8;
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
+	HAL_SPI_Transmit(&hspi1, TxSPI, 6, 100);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
+	
+	// Nastavi RX naslov za 1. pipo
+	//LSBajt gre prvi
+	TxSPI[0] = 0x0B | (1 << 5);
+	TxSPI[1] = 0x88;
+	TxSPI[2] = 0xF0;
+	TxSPI[3] = 0xF0;
+	TxSPI[4] = 0xE8;
+	TxSPI[5] = 0xE8;
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
+	HAL_SPI_Transmit(&hspi1, TxSPI, 6, 100);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
+	
+	// Nastavi TX naslov
+	//LSBajt gre prvi
+	TxSPI[0] = 0x10 | (1 << 5);
+	TxSPI[1] = 0xE1;
+	TxSPI[2] = 0xF0;
+	TxSPI[3] = 0xF0;
+	TxSPI[4] = 0xE8;
+	TxSPI[5] = 0xE8;
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
+	HAL_SPI_Transmit(&hspi1, TxSPI, 6, 100);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
+	
+	// Nastavi 5 bajtov za sprejem za 0. pipo
+	TxSPI[0] = 0x11 | (1 << 5);
+	TxSPI[1] = 32;
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
+	HAL_SPI_Transmit(&hspi1, TxSPI, 2, 100);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
+	
+	// Nastavi 5 bajtov za sprejem za 1. pipo
+	TxSPI[0] = 0x12 | (1 << 5);
+	TxSPI[1] = 32;
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
+	HAL_SPI_Transmit(&hspi1, TxSPI, 2, 100);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
+	
+	// Nastavi RX in vklopi
+	TxSPI[0] = 0x00 | (1 << 5);
+	TxSPI[1] = 0x0F;
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
+	HAL_SPI_Transmit(&hspi1, TxSPI, 2, 100);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
+	
+	// Nastavi frekvenco na 2400 + 76 MHz
+	TxSPI[0] = 0x05 | (1 << 5);
+	TxSPI[1] = 76;
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
+	HAL_SPI_Transmit(&hspi1, TxSPI, 2, 100);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
+	
+	// Nastavi SETUP_RETR register
+	TxSPI[0] = 0x04 | (1 << 5);
+	TxSPI[1] = 0x5F;
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
+	HAL_SPI_Transmit(&hspi1, TxSPI, 2, 100);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
+	
+	// Nastavi RF_SETUP register
+	TxSPI[0] = 0x06 | (1 << 5);
+	TxSPI[1] = 0x02;
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
+	HAL_SPI_Transmit(&hspi1, TxSPI, 2, 100);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
+	
+	// Nastavi STATUS register
+	TxSPI[0] = 0x07 | (1 << 5);
+	TxSPI[1] = 0x70;
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
+	HAL_SPI_Transmit(&hspi1, TxSPI, 2, 100);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
+	
+	// Nastavi ACTIVATE
+	TxSPI[0] = 0x50;
+	TxSPI[1] = 0x73;
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
+	HAL_SPI_Transmit(&hspi1, TxSPI, 2, 100);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
+	
+	// Splakni RX in TXbuffer
+	TxSPI[0] = 0xE2;	// Splakni RX buffer
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
+	HAL_SPI_Transmit(&hspi1, TxSPI, 1, 100);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
+	
+	TxSPI[0] = 0xE1;	// Splakni TX buffer
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
+	HAL_SPI_Transmit(&hspi1, TxSPI, 1, 100);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
 	
 
+	
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -121,14 +222,21 @@ int main(void)
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
-		
-		//sprejemanje podatkov iz dolocenega naslova
-		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
-		RxSPIByte = SPI_sprejmi_bajt(0x00);
-		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
+		i = 0;
 		
 		
-		SPI_poslji_bajt(0x01, 0x0F);
+		sprejmiRadio();
+		
+		posljiRadio();
+		
+		if (i)
+		{
+			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
+			HAL_SPI_Transmit(&hspi1, TxSPI, 2, 100);
+			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
+		}
+				
+		
 
   }
   /* USER CODE END 3 */
@@ -262,21 +370,138 @@ static void MX_GPIO_Init(void)
 
 uint8_t SPI_sprejmi_bajt(uint8_t data)
 {
-	uint8_t buffer[10] = {0, 0};
-	buffer[0] = data;
-	HAL_SPI_Receive(&hspi1, buffer, 2, 1000);
+	uint8_t buffer[6] = {10, 10, 10, 10, 10, 10};
+	//buffer[0] = data;
+	HAL_SPI_Receive(&hspi1, buffer, 6, 100);
 	
 	return buffer[1];
 }
 
 void SPI_poslji_bajt(uint8_t naslov, uint8_t vrednost)
 {
-	uint8_t buffer[2] = {0, 0};
-	// Za pisanje v register je potrebno bit 5 postaviti na 1
-	buffer[0] = naslov | (1 << 5); //naslov
-	buffer[1] = vrednost; //vrednost
+	TxSPI[0] = 0x0A | (1 << 5);
+	TxSPI[1] = 0xE8;
+	TxSPI[2] = 0xE8;
+	TxSPI[3] = 0xF0;
+	TxSPI[4] = 0xF0;
+	TxSPI[5] = 0xE1;
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
+	HAL_SPI_Receive(&hspi1, TxSPI, 6, 100);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
+
+}
+
+void sprejmiRadio()
+{
+	// 1. postavi PRIM_RX = 1
+	TxSPI[0] = 0x00 | (1 << 5);
+	TxSPI[1] = 0x0F;
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
+	HAL_SPI_Transmit(&hspi1, TxSPI, 2, 100);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
 	
-	HAL_SPI_Transmit(&hspi1, buffer, 2, 100);
+	TxSPI[0] = 0x07 | (1 << 5);
+	TxSPI[1] = 0x70;
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
+	HAL_SPI_Transmit(&hspi1, TxSPI, 2, 100);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
+	
+	// 2. postavi CE=1
+	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_SET);
+	
+	// 3. pocakaj 130 us
+	HAL_Delay(130);
+	
+	// 4. ali so podatki prišli?
+	RxSPI[0] = 0x17;
+	RxSPI[1] = 0xFF;
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
+	HAL_SPI_Receive(&hspi1, RxSPI, 2, 100);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
+	
+	// 5. postavi CE=0
+	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_SET);
+	
+	if(!(RxSPI[1] & (1 << 0)))
+	{//podatki so prišli
+		test[0] = 0x61;
+		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
+		HAL_SPI_Receive(&hspi1, test, 33, 100);
+		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
+	}
+	else
+	{// splaknem RX FIFO
+		TxSPI[0] = 0xE2;
+		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
+		HAL_SPI_Transmit(&hspi1, TxSPI, 1, 100);
+		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
+	}
+	
+}
+
+void posljiRadio()
+{
+	// 1. postavi PRIM_RX = 0
+	
+	//postavi CE=0
+	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_RESET);
+	
+	TxSPI[0] = 0x00 | (1 << 5);
+	TxSPI[1] = 0x0E;
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
+	HAL_SPI_Transmit(&hspi1, TxSPI, 2, 100);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
+	
+	TxSPI[0] = 0x07 | (1 << 5);
+	TxSPI[1] = 0x70;
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
+	HAL_SPI_Transmit(&hspi1, TxSPI, 2, 100);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
+	
+	
+	// 2. naloži podatke v pomnilnik
+	test[0] = 0xA0; // naslov pomnilnika
+	test[1] = 0x12;
+	test[2] = 0x34;
+	test[3] = 0x56;
+	test[4] = 0x78;
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
+	HAL_SPI_Transmit(&hspi1, test, 33, 100);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
+	
+	RxSPI[0] = 0x17;
+	RxSPI[1] = 0xFF;
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
+	HAL_SPI_Receive(&hspi1, RxSPI, 2, 100);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
+	
+	// 3. pošlji vsaj 10 us pulz na CE za prenos paketa
+	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_SET);
+	HAL_Delay(20);
+	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_RESET);
+	
+	// 4. ali so podatki prišli?
+	RxSPI[0] = 0x17;
+	RxSPI[1] = 0xFF;
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
+	HAL_SPI_Receive(&hspi1, RxSPI, 2, 100);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
+	
+	if(RxSPI[0] & (1 << 5))
+	{//podatki so bili dostavljeni
+		TxSPI[0] = 0x07 | (1 << 5);
+		TxSPI[1] = 0x70;
+		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
+		HAL_SPI_Transmit(&hspi1, TxSPI, 2, 100);
+		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
+	}
+	else
+	{// splaknem TX FIFO
+		TxSPI[0] = 0xE1;
+		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
+		HAL_SPI_Transmit(&hspi1, TxSPI, 1, 100);
+		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
+	}
 }
 
 /* USER CODE END 4 */
