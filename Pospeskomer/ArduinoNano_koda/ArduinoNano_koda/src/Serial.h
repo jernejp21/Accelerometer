@@ -30,9 +30,9 @@
 #endif
 
 void SPI_MasterInit(void);
-void SPI_MasterTransmit(const char cData);
+void SPI_Transmit(const char cData);
 inline void SPI_SlaveInit(void);
-inline char SPI_SlaveReceive(void);
+inline char SPI_Receive(void);
 void I2C_Begin(void);
 inline void I2C_Transmit(const uint8_t slave_address, const uint8_t reg_address, const uint8_t data);
 inline uint8_t I2C_Read_one(const uint8_t slave_address, const uint8_t reg_address);
@@ -52,12 +52,13 @@ inline char Serial_read(void);
 void SPI_MasterInit(void)
 {
 	/* Set MOSI and SCK output, all others input */
-	DDRB = (1<<MOSI)|(1<<SCK)|(1<<SS);
+	DDRB |= (1<<MOSI)|(1<<SCK)|(1<<SS);
+	PORTB |= (1 << SS);
 	/* Enable SPI, Master, set clock rate fck/16 */
 	SPCR = (1<<SPE)|(1<<MSTR)|(1<<SPR0);
 }
 
-void SPI_MasterTransmit(char cData)
+void SPI_Transmit(char cData)
 {
 	/* Start transmission */
 	SPDR = cData;
@@ -72,7 +73,7 @@ void SPI_SlaveInit(void)
 	/* Enable SPI */
 	SPCR = (1<<SPE);
 }
-char SPI_SlaveReceive(void)
+char SPI_Receive(void)
 {
 	/* Wait for reception complete */
 	while(!(SPSR & (1<<SPIF)));
@@ -82,8 +83,8 @@ char SPI_SlaveReceive(void)
 
 void I2C_Begin(void)
 {
-    TWBR = 0x0C;
-    TWSR |= 0x03;
+    TWBR = 72;
+    //TWSR |= 0x03;
 }
 
 inline void I2C_Transmit(const uint8_t slave_address, const uint8_t reg_address, const uint8_t data)
