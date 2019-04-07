@@ -1,4 +1,0 @@
-load STM32L476RGTx 
-project name STCubeGenerated 
-project toolchain "Makefile" 
-project path "C:\Users\Jernej\Documents\Keil\RTE\Device\STM32L476RGTx\" 
