@@ -14,7 +14,7 @@ c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/..
 Allocating common symbols
 Common symbol       size              file
 
-RxSPI               0x2               src/main.o
+nastavitve          0xe               src/main.o
 paket               0xe               src/main.o
 
 Discarded input sections
@@ -140,8 +140,12 @@ Discarded input sections
                 0x00000000        0xc src/main.o
  .text.printWord
                 0x00000000      0x176 src/main.o
- .bss.zapis     0x00000000        0x1 src/main.o
- .bss.test1     0x00000000        0x2 src/main.o
+ .text.poslji_nastavitev
+                0x00000000        0x2 src/main.o
+ .text.poslusaj_nRF
+                0x00000000        0x4 src/main.o
+ .text.preberem_podatke
+                0x00000000        0x4 src/main.o
  .debug_macro   0x00000000      0xa4e src/main.o
  .debug_macro   0x00000000      0x6d7 src/main.o
  .debug_macro   0x00000000       0x10 src/main.o
@@ -375,7 +379,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x424
+.text           0x00000000      0x488
  *(.vectors)
  .vectors       0x00000000       0x68 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
                 0x00000000                __vector_default
@@ -470,22 +474,28 @@ END GROUP
  .text.Serial_begin
                 0x000000be       0x18 src/main.o
                 0x000000be                Serial_begin
+ .text.radio_init
+                0x000000d6       0xd6 src/main.o
+                0x000000d6                radio_init
+ .text.sist_init
+                0x000001ac       0x5a src/main.o
+                0x000001ac                sist_init
+ .text.radio_poslji
+                0x00000206       0x8c src/main.o
+                0x00000206                radio_poslji
  .text.__vector_11
-                0x000000d6       0x24 src/main.o
-                0x000000d6                __vector_11
- .text.radioBegin
-                0x000000fa       0xd6 src/main.o
-                0x000000fa                radioBegin
- .text.radioWrite
-                0x000001d0       0xa2 src/main.o
-                0x000001d0                radioWrite
- .text.main     0x00000272      0x1ae src/main.o
-                0x00000272                main
-                0x00000420                . = ALIGN (0x2)
+                0x00000292      0x132 src/main.o
+                0x00000292                __vector_11
+ .text.dolocim_cas
+                0x000003c4       0x24 src/main.o
+                0x000003c4                dolocim_cas
+ .text.main     0x000003e8       0x9c src/main.o
+                0x000003e8                main
+                0x00000484                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00000420        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
-                0x00000420                _exit
-                0x00000420                exit
+ .fini9         0x00000484        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                0x00000484                _exit
+                0x00000484                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -504,42 +514,57 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00000420        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x00000484        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00000424                _etext = .
+                0x00000488                _etext = .
 
-.data           0x00800100        0xa load address 0x00000424
+.data           0x00800100        0xc load address 0x00000488
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
+ .data.sprejemnik
+                0x00800100        0x5 src/main.o
+                0x00800100                sprejemnik
+ .data.oddajnik
+                0x00800105        0x5 src/main.o
+                0x00800105                oddajnik
+ .data.imam_cas
+                0x0080010a        0x1 src/main.o
+                0x0080010a                imam_cas
  *(.gnu.linkonce.d*)
  *(.rodata)
- .rodata        0x00800100        0xa src/main.o
  *(.rodata*)
  *(.gnu.linkonce.r*)
-                0x0080010a                . = ALIGN (0x2)
-                0x0080010a                _edata = .
-                0x0080010a                PROVIDE (__data_end, .)
+                0x0080010c                . = ALIGN (0x2)
+ *fill*         0x0080010b        0x1 
+                0x0080010c                _edata = .
+                0x0080010c                PROVIDE (__data_end, .)
 
-.bss            0x0080010a       0x11
-                0x0080010a                PROVIDE (__bss_start, .)
+.bss            0x0080010c       0x1f
+                0x0080010c                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
- .bss.test      0x0080010a        0x1 src/main.o
-                0x0080010a                test
+ .bss.stevilo_nastavitev
+                0x0080010c        0x1 src/main.o
+                0x0080010c                stevilo_nastavitev
+ .bss.TX        0x0080010d        0x1 src/main.o
+                0x0080010d                TX
+ .bss.cakalna_vrsta
+                0x0080010e        0x1 src/main.o
+                0x0080010e                cakalna_vrsta
  *(COMMON)
- COMMON         0x0080010b       0x10 src/main.o
-                0x0080010b                RxSPI
-                0x0080010d                paket
-                0x0080011b                PROVIDE (__bss_end, .)
-                0x00000424                __data_load_start = LOADADDR (.data)
-                0x0000042e                __data_load_end = (__data_load_start + SIZEOF (.data))
+ COMMON         0x0080010f       0x1c src/main.o
+                0x0080010f                nastavitve
+                0x0080011d                paket
+                0x0080012b                PROVIDE (__bss_end, .)
+                0x00000488                __data_load_start = LOADADDR (.data)
+                0x00000494                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x0080011b        0x0
+.noinit         0x0080012b        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
  *(.noinit*)
                 [!provide]                PROVIDE (__noinit_end, .)
-                0x0080011b                _end = .
+                0x0080012b                _end = .
                 [!provide]                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
@@ -604,42 +629,42 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000       0x70
+.debug_aranges  0x00000000       0x98
  *(.debug_aranges)
  .debug_aranges
-                0x00000000       0x70 src/main.o
+                0x00000000       0x98 src/main.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x103b
+.debug_info     0x00000000     0x1163
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x5f4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
- .debug_info    0x000005f4      0xa47 src/main.o
+ .debug_info    0x000005f4      0xb6f src/main.o
 
-.debug_abbrev   0x00000000      0x81d
+.debug_abbrev   0x00000000      0x88e
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x5a2 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
- .debug_abbrev  0x000005a2      0x27b src/main.o
+ .debug_abbrev  0x000005a2      0x2ec src/main.o
 
-.debug_line     0x00000000      0xda6
+.debug_line     0x00000000      0xe34
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x133 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
- .debug_line    0x00000133      0xc73 src/main.o
+ .debug_line    0x00000133      0xd01 src/main.o
 
-.debug_frame    0x00000000      0x11c
+.debug_frame    0x00000000      0x198
  *(.debug_frame)
- .debug_frame   0x00000000      0x11c src/main.o
+ .debug_frame   0x00000000      0x198 src/main.o
 
-.debug_str      0x00000000    0x10d2b
+.debug_str      0x00000000    0x10dcb
  *(.debug_str)
  .debug_str     0x00000000      0x208 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
- .debug_str     0x00000208    0x10b23 src/main.o
-                              0x10cf0 (size before relaxing)
+ .debug_str     0x00000208    0x10bc3 src/main.o
+                              0x10d9b (size before relaxing)
 
-.debug_loc      0x00000000      0x639
+.debug_loc      0x00000000      0x6ea
  *(.debug_loc)
- .debug_loc     0x00000000      0x639 src/main.o
+ .debug_loc     0x00000000      0x6ea src/main.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -659,19 +684,19 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000       0x60
+.debug_ranges   0x00000000       0x88
  *(.debug_ranges)
- .debug_ranges  0x00000000       0x60 src/main.o
+ .debug_ranges  0x00000000       0x88 src/main.o
 
-.debug_macro    0x00000000      0x6de
+.debug_macro    0x00000000      0x6e4
  *(.debug_macro)
- .debug_macro   0x00000000      0x21d src/main.o
- .debug_macro   0x0000021d      0x2c3 src/main.o
- .debug_macro   0x000004e0       0x1c src/main.o
- .debug_macro   0x000004fc       0x16 src/main.o
- .debug_macro   0x00000512       0x10 src/main.o
- .debug_macro   0x00000522      0x160 src/main.o
- .debug_macro   0x00000682       0x2e src/main.o
- .debug_macro   0x000006b0       0x2e src/main.o
+ .debug_macro   0x00000000      0x223 src/main.o
+ .debug_macro   0x00000223      0x2c3 src/main.o
+ .debug_macro   0x000004e6       0x1c src/main.o
+ .debug_macro   0x00000502       0x16 src/main.o
+ .debug_macro   0x00000518       0x10 src/main.o
+ .debug_macro   0x00000528      0x160 src/main.o
+ .debug_macro   0x00000688       0x2e src/main.o
+ .debug_macro   0x000006b6       0x2e src/main.o
 OUTPUT(Celoten_sistem.elf elf32-avr)
 LOAD linker stubs
