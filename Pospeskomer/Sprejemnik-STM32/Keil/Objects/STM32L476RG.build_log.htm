@@ -22,33 +22,18 @@ Dialog DLL:      TCM.DLL V1.32.0.0
  
 <h2>Project:</h2>
 D:\Projekti\Pospeskomer\Sprejemnik-STM32\Keil\STM32L476RG.uvprojx
-Project File Date:  04/07/2019
+Project File Date:  05/03/2019
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 5 (build 528)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'Target 1'
-compiling stm32l4xx_hal_dma.c...
-compiling stm32l4xx_hal_cortex.c...
-compiling stm32l4xx_hal.c...
-compiling stm32l4xx_it.c...
-compiling stm32l4xx_hal_gpio.c...
-compiling stm32l4xx_hal_dma_ex.c...
 compiling main.c...
-RTE\Device\STM32L476RGTx\STCubeGenerated\Src\main.c(325): warning:  #111-D: statement is unreachable
+RTE\Device\STM32L476RGTx\STCubeGenerated\Src\main.c(315): warning:  #111-D: statement is unreachable
   	SPI_poslji_bajt(1,1);
-RTE\Device\STM32L476RGTx\STCubeGenerated\Src\main.c(144): warning:  #550-D: variable "i"  was set but never used
-    int i = 0;
-RTE\Device\STM32L476RGTx\STCubeGenerated\Src\main.c: 2 warnings, 0 errors
-compiling stm32l4xx_hal_spi_ex.c...
-compiling stm32l4xx_hal_pwr.c...
-compiling stm32l4xx_hal_pwr_ex.c...
-compiling stm32l4xx_hal_rcc.c...
-compiling stm32l4xx_hal_spi.c...
-compiling stm32l4xx_hal_msp.c...
-compiling stm32l4xx_hal_rcc_ex.c...
+RTE\Device\STM32L476RGTx\STCubeGenerated\Src\main.c: 1 warning, 0 errors
 linking...
-Program Size: Code=8144 RO-data=496 RW-data=40 ZI-data=5752  
-".\Objects\STM32L476RG.axf" - 0 Error(s), 2 Warning(s).
+Program Size: Code=9516 RO-data=496 RW-data=40 ZI-data=5816  
+".\Objects\STM32L476RG.axf" - 0 Error(s), 1 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -69,6 +54,7 @@ Package Vendor: Keil
                 Keil.STM32L4xx_DFP.2.1.0
                 STMicroelectronics STM32L4 Series Device Support, Drivers and Examples
    * Component: Startup Version: 1.3.1
+   * Component: TIM Version: 1.9.0
    * Component: SPI Version: 1.9.0
    * Component: RCC Version: 1.9.0
    * Component: PWR Version: 1.9.0
@@ -95,6 +81,10 @@ Package Vendor: Keil
       Include file:  Drivers\CMSIS\Device\ST\STM32L4xx\Include\stm32l4xx.h
       Source file:   Drivers\CMSIS\Device\ST\STM32L4xx\Source\Templates\arm\startup_stm32l476xx.s
       Source file:   Drivers\CMSIS\Device\ST\STM32L4xx\Source\Templates\system_stm32l4xx.c
+
+   * Component: Keil::Device:STM32Cube HAL:TIM:1.9.0
+      Source file:   Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_tim.c
+      Source file:   Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_tim_ex.c
 
    * Component: Keil::Device:STM32Cube HAL:SPI:1.9.0
       Source file:   Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_spi.c
@@ -123,14 +113,14 @@ Package Vendor: Keil
       Source file:   Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal.c
 
    * Component: Keil::Device:STM32Cube Framework:STM32CubeMX:1.0.1
-      Include file:  MX_Device.h
-      Include file:  STCubeGenerated\Inc\stm32l4xx_hal_conf.h
       Source file:   STCubeGenerated\Src\stm32l4xx_hal_msp.c
+      Include file:  STCubeGenerated\Inc\stm32l4xx_hal_conf.h
+      Include file:  MX_Device.h
 
    * Component: ARM::CMSIS:CORE:5.0.1
 
    * Component: ::Device:STM32Cube Framework:1.1.0 (API)
-Build Time Elapsed:  00:00:44
+Build Time Elapsed:  00:00:06
 </pre>
 </body>
 </html>

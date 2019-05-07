@@ -95,16 +95,16 @@
          <BookmarkList></BookmarkList>
          <CaretPos>0</CaretPos>
          <Encoding>2</Encoding>
-         <FileName>D:\Projekti\Pospeskomer\Sprejemnik-STM32\Keil\RTE\Device\STM32L476RGTx\STCubeGenerated\Src\stm32l4xx_it.c</FileName>
-         <FileType>1</FileType>
+         <FileName>D:\Projekti\Pospeskomer\Sprejemnik-STM32\Keil\RTE\Device\STM32L476RGTx\STCubeGenerated\MDK-ARM\startup_stm32l476xx.s</FileName>
+         <FileType>0</FileType>
          <ScrollPos>0</ScrollPos>
         </__.18>
         <__.19>
          <BookmarkList></BookmarkList>
          <CaretPos>0</CaretPos>
          <Encoding>2</Encoding>
-         <FileName>D:\Projekti\Pospeskomer\Sprejemnik-STM32\Keil\RTE\Device\STM32L476RGTx\STCubeGenerated\MDK-ARM\startup_stm32l476xx.s</FileName>
-         <FileType>0</FileType>
+         <FileName>D:\Projekti\Pospeskomer\Sprejemnik-STM32\Keil\RTE\Device\STM32L476RGTx\STCubeGenerated\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_spi.c</FileName>
+         <FileType>1</FileType>
          <ScrollPos>0</ScrollPos>
         </__.19>
         <__.2>
@@ -119,7 +119,7 @@
          <BookmarkList></BookmarkList>
          <CaretPos>0</CaretPos>
          <Encoding>2</Encoding>
-         <FileName>D:\Projekti\Pospeskomer\Sprejemnik-STM32\Keil\RTE\Device\STM32L476RGTx\STCubeGenerated\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_spi.c</FileName>
+         <FileName>D:\Projekti\Pospeskomer\Sprejemnik-STM32\Keil\RTE\Device\STM32L476RGTx\STCubeGenerated\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_gpio.c</FileName>
          <FileType>1</FileType>
          <ScrollPos>0</ScrollPos>
         </__.20>
@@ -127,50 +127,74 @@
          <BookmarkList></BookmarkList>
          <CaretPos>0</CaretPos>
          <Encoding>2</Encoding>
-         <FileName>D:\Projekti\Pospeskomer\Sprejemnik-STM32\Keil\RTE\Device\STM32L476RGTx\STCubeGenerated\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_gpio.c</FileName>
+         <FileName>D:\Projekti\Pospeskomer\Sprejemnik-STM32\Keil\RTE\Device\STM32L476RGTx\STCubeGenerated\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal.c</FileName>
          <FileType>1</FileType>
          <ScrollPos>0</ScrollPos>
         </__.21>
         <__.22>
          <BookmarkList></BookmarkList>
-         <CaretPos>0</CaretPos>
+         <CaretPos>103514</CaretPos>
          <Encoding>2</Encoding>
-         <FileName>D:\Projekti\Pospeskomer\Sprejemnik-STM32\Keil\RTE\Device\STM32L476RGTx\STCubeGenerated\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal.c</FileName>
+         <FileName>C:\Keil_v5\ARM\PACK\Keil\STM32L4xx_DFP\2.1.0\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_tim.c</FileName>
          <FileType>1</FileType>
-         <ScrollPos>0</ScrollPos>
+         <ScrollPos>3165</ScrollPos>
         </__.22>
         <__.23>
+         <BookmarkList></BookmarkList>
+         <CaretPos>6949</CaretPos>
+         <Encoding>2</Encoding>
+         <FileName>D:\Projekti\Pospeskomer\Sprejemnik-STM32\Keil\RTE\Device\STM32L476RGTx\STCubeGenerated\Src\stm32l4xx_it.c</FileName>
+         <FileType>1</FileType>
+         <ScrollPos>201</ScrollPos>
+        </__.23>
+        <__.24>
          <BookmarkList></BookmarkList>
          <CaretPos>13234</CaretPos>
          <Encoding>2</Encoding>
          <FileName>C:\Keil_v5\ARM\PACK\Keil\STM32L4xx_DFP\2.1.0\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal.c</FileName>
          <FileType>1</FileType>
          <ScrollPos>330</ScrollPos>
-        </__.23>
-        <__.24>
-         <BookmarkList></BookmarkList>
-         <CaretPos>11247</CaretPos>
-         <Encoding>2</Encoding>
-         <FileName>D:\Projekti\Pospeskomer\Sprejemnik-STM32\Keil\RTE\Device\STM32L476RGTx\startup_stm32l476xx.s</FileName>
-         <FileType>0</FileType>
-         <ScrollPos>168</ScrollPos>
         </__.24>
         <__.25>
-         <BookmarkList></BookmarkList>
-         <CaretPos>3929</CaretPos>
-         <Encoding>2</Encoding>
-         <FileName>D:\Projekti\Pospeskomer\Sprejemnik-STM32\Keil\RTE\Device\STM32L476RGTx\STCubeGenerated\Src\main.c</FileName>
-         <FileType>1</FileType>
-         <ScrollPos>91</ScrollPos>
-        </__.25>
-        <__.26>
          <BookmarkList></BookmarkList>
          <CaretPos>24568</CaretPos>
          <Encoding>2</Encoding>
          <FileName>C:\Keil_v5\ARM\PACK\Keil\STM32L4xx_DFP\2.1.0\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_rcc.c</FileName>
          <FileType>1</FileType>
          <ScrollPos>554</ScrollPos>
+        </__.25>
+        <__.26>
+         <BookmarkList></BookmarkList>
+         <CaretPos>52281</CaretPos>
+         <Encoding>2</Encoding>
+         <FileName>C:\Keil_v5\ARM\PACK\Keil\STM32L4xx_DFP\2.1.0\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_spi.c</FileName>
+         <FileType>1</FileType>
+         <ScrollPos>1377</ScrollPos>
         </__.26>
+        <__.27>
+         <BookmarkList></BookmarkList>
+         <CaretPos>9355</CaretPos>
+         <Encoding>2</Encoding>
+         <FileName>D:\Projekti\Pospeskomer\Sprejemnik-STM32\Keil\RTE\Device\STM32L476RGTx\STCubeGenerated\Src\main.c</FileName>
+         <FileType>1</FileType>
+         <ScrollPos>295</ScrollPos>
+        </__.27>
+        <__.28>
+         <BookmarkList></BookmarkList>
+         <CaretPos>11247</CaretPos>
+         <Encoding>2</Encoding>
+         <FileName>D:\Projekti\Pospeskomer\Sprejemnik-STM32\Keil\RTE\Device\STM32L476RGTx\startup_stm32l476xx.s</FileName>
+         <FileType>0</FileType>
+         <ScrollPos>168</ScrollPos>
+        </__.28>
+        <__.29>
+         <BookmarkList></BookmarkList>
+         <CaretPos>18504</CaretPos>
+         <Encoding>2</Encoding>
+         <FileName>C:\Keil_v5\ARM\PACK\Keil\STM32L4xx_DFP\2.1.0\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_gpio.c</FileName>
+         <FileType>1</FileType>
+         <ScrollPos>442</ScrollPos>
+        </__.29>
         <__.3>
          <BookmarkList></BookmarkList>
          <CaretPos>119555</CaretPos>
@@ -1016,47 +1040,39 @@
       </ActiveDocument>
       <Editor.0>
        <FileBarIndex>0</FileBarIndex>
-       <RectPosBottom>385</RectPosBottom>
-       <RectPosLeft>75</RectPosLeft>
-       <RectPosRight>585</RectPosRight>
-       <RectPosTop>75</RectPosTop>
-       <RelativeFileName>C:\Keil_v5\ARM\PACK\Keil\STM32L4xx_DFP\2.1.0\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal.c</RelativeFileName>
+       <RectPosBottom>435</RectPosBottom>
+       <RectPosLeft>25</RectPosLeft>
+       <RectPosRight>416</RectPosRight>
+       <RectPosTop>25</RectPosTop>
+       <RelativeFileName>C:\Keil_v5\ARM\PACK\Keil\STM32L4xx_DFP\2.1.0\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_gpio.c</RelativeFileName>
       </Editor.0>
       <Editor.1>
        <FileBarIndex>1</FileBarIndex>
-       <RectPosBottom>360</RectPosBottom>
-       <RectPosLeft>50</RectPosLeft>
-       <RectPosRight>429</RectPosRight>
-       <RectPosTop>50</RectPosTop>
-       <RelativeFileName>C:\Keil_v5\ARM\PACK\Keil\STM32L4xx_DFP\2.1.0\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_rcc.c</RelativeFileName>
+       <RectPosBottom>598</RectPosBottom>
+       <RectPosLeft>175</RectPosLeft>
+       <RectPosRight>1183</RectPosRight>
+       <RectPosTop>175</RectPosTop>
+       <RelativeFileName>..\Keil\RTE\Device\STM32L476RGTx\startup_stm32l476xx.s</RelativeFileName>
       </Editor.1>
       <Editor.2>
-       <FileBarIndex>3</FileBarIndex>
-       <RectPosBottom>310</RectPosBottom>
-       <RectPosLeft>0</RectPosLeft>
-       <RectPosRight>885</RectPosRight>
-       <RectPosTop>0</RectPosTop>
-       <RelativeFileName>..\Keil\RTE\Device\STM32L476RGTx\startup_stm32l476xx.s</RelativeFileName>
-      </Editor.2>
-      <Editor.3>
        <FileBarIndex>2</FileBarIndex>
        <RectPosBottom>335</RectPosBottom>
        <RectPosLeft>25</RectPosLeft>
        <RectPosRight>910</RectPosRight>
        <RectPosTop>25</RectPosTop>
        <RelativeFileName>..\Keil\RTE\Device\STM32L476RGTx\STCubeGenerated\Src\main.c</RelativeFileName>
-      </Editor.3>
+      </Editor.2>
       <EditorHistoryFile.0>
-       <RelativeFileName>..\Keil\RTE\Device\STM32L476RGTx\STCubeGenerated\MDK-ARM\startup_stm32l476xx.s</RelativeFileName>
+       <RelativeFileName>..\Keil\RTE\Device\STM32L476RGTx\startup_stm32l476xx.s</RelativeFileName>
       </EditorHistoryFile.0>
       <EditorHistoryFile.1>
-       <RelativeFileName>..\Keil\RTE\Device\STM32L476RGTx\STCubeGenerated\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_spi.c</RelativeFileName>
+       <RelativeFileName>C:\Keil_v5\ARM\PACK\Keil\STM32L4xx_DFP\2.1.0\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal.c</RelativeFileName>
       </EditorHistoryFile.1>
       <EditorHistoryFile.2>
-       <RelativeFileName>..\Keil\RTE\Device\STM32L476RGTx\STCubeGenerated\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_gpio.c</RelativeFileName>
+       <RelativeFileName>C:\Keil_v5\ARM\PACK\Keil\STM32L4xx_DFP\2.1.0\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_rcc.c</RelativeFileName>
       </EditorHistoryFile.2>
       <EditorHistoryFile.3>
-       <RelativeFileName>..\Keil\RTE\Device\STM32L476RGTx\STCubeGenerated\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal.c</RelativeFileName>
+       <RelativeFileName>C:\Keil_v5\ARM\PACK\Keil\STM32L4xx_DFP\2.1.0\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_spi.c</RelativeFileName>
       </EditorHistoryFile.3>
      </Documents.0>
      <Progress>
@@ -1205,7 +1221,7 @@
         </ExpressionDisplay>
        </Watch.4>
        <Watch.5>
-        <WatchName>0x0a | (1 &lt;&lt; 5)</WatchName>
+        <WatchName>0x07 | (1 &lt;&lt; 5)</WatchName>
         <ExpressionDisplay>
          <Color>0</Color>
          <ColorBack>8421376</ColorBack>
@@ -1345,7 +1361,7 @@
       <TypeOfWnd>-1</TypeOfWnd>
       <DockRect.0>
        <AreHorz>0</AreHorz>
-       <Percent>742</Percent>
+       <Percent>618</Percent>
        <Type>0</Type>
        <TypeOfWnd>-1</TypeOfWnd>
        <DockRect.0>
@@ -1457,33 +1473,80 @@
        <TypeOfWnd>-1</TypeOfWnd>
       </DockRect.1>
       <DockRect.2>
-       <AreHorz>1</AreHorz>
-       <Percent>742</Percent>
-       <strTypeOfWnd>Watch</strTypeOfWnd>
+       <AreHorz>0</AreHorz>
+       <Percent>303</Percent>
        <Type>0</Type>
-       <TypeOfWnd>2</TypeOfWnd>
-       <Data>
-        <Columns.0>
-         <Pos type="D">0.0000000000000000</Pos>
-         <Width>133</Width>
-        </Columns.0>
-        <Columns.1>
-         <Pos type="D">7.9261025029797381</Pos>
-         <Width>127</Width>
-        </Columns.1>
-        <Columns.2>
-         <Pos type="D">15.4946364719904643</Pos>
-         <Width>151</Width>
-        </Columns.2>
-        <Columns.3>
-         <Pos type="D">24.4934445768772342</Pos>
-         <Width>238</Width>
-        </Columns.3>
-        <Columns.4>
-         <Pos type="D">38.6769964243146589</Pos>
-         <Width>1029</Width>
-        </Columns.4>
-       </Data>
+       <TypeOfWnd>-1</TypeOfWnd>
+       <DockRect.0>
+        <AreHorz>1</AreHorz>
+        <Percent>1015</Percent>
+        <strTypeOfWnd>Watch</strTypeOfWnd>
+        <Type>0</Type>
+        <TypeOfWnd>2</TypeOfWnd>
+        <Data>
+         <Columns.0>
+          <Pos type="D">0.0000000000000000</Pos>
+          <Width>236</Width>
+         </Columns.0>
+         <Columns.1>
+          <Pos type="D">23.2971372161895367</Pos>
+          <Width>127</Width>
+         </Columns.1>
+         <Columns.2>
+          <Pos type="D">35.8341559723593264</Pos>
+          <Width>151</Width>
+         </Columns.2>
+         <Columns.3>
+          <Pos type="D">50.7403751233958573</Pos>
+          <Width>238</Width>
+         </Columns.3>
+         <Columns.4>
+          <Pos type="D">74.2349457058242876</Pos>
+          <Width>261</Width>
+         </Columns.4>
+        </Data>
+       </DockRect.0>
+       <DockRect.1>
+        <AreHorz>1</AreHorz>
+        <Percent>5</Percent>
+        <Type>6</Type>
+        <TypeOfWnd>-1</TypeOfWnd>
+       </DockRect.1>
+       <DockRect.2>
+        <AreHorz>1</AreHorz>
+        <Percent>660</Percent>
+        <strTypeOfWnd>Variables</strTypeOfWnd>
+        <Type>0</Type>
+        <TypeOfWnd>3</TypeOfWnd>
+        <Data>
+         <Columns.0>
+          <Pos type="D">0.0000000000000000</Pos>
+          <Width>180</Width>
+         </Columns.0>
+         <Columns.1>
+          <Pos type="D">27.3556231003039514</Pos>
+          <Width>80</Width>
+         </Columns.1>
+         <Columns.2>
+          <Pos type="D">39.5136778115501528</Pos>
+          <Width>80</Width>
+         </Columns.2>
+         <Columns.3>
+          <Pos type="D">51.6717325227963542</Pos>
+          <Width>140</Width>
+         </Columns.3>
+         <Columns.4>
+          <Pos type="D">72.9483282674772084</Pos>
+          <Width>178</Width>
+         </Columns.4>
+        </Data>
+       </DockRect.2>
+       <DockRect.3>
+        <AreHorz>1</AreHorz>
+        <Percent>0</Percent>
+        <Type>6</Type>
+        <TypeOfWnd>-1</TypeOfWnd>
+       </DockRect.3>
       </DockRect.2>
       <DockRect.3>
        <AreHorz>1</AreHorz>
@@ -1508,9 +1571,22 @@
          <Condition></Condition>
          <Condition_Count>0</Condition_Count>
          <ConditionEnabled>False</ConditionEnabled>
-         <Name>&quot;..\Keil\RTE\Device\STM32L476RGTx\STCubeGenerated\Src\main.c&quot;::104</Name>
+         <Name>&quot;..\Keil\RTE\Device\STM32L476RGTx\STCubeGenerated\Src\main.c&quot;::297</Name>
         </__>
        </BP.0>
+       <BP.1>
+        <__>
+         <ActionEnabled>False</ActionEnabled>
+         <ActionScript></ActionScript>
+         <ActionScriptParams></ActionScriptParams>
+         <ActionShow>False</ActionShow>
+         <Active>True</Active>
+         <Condition></Condition>
+         <Condition_Count>0</Condition_Count>
+         <ConditionEnabled>False</ConditionEnabled>
+         <Name>&quot;..\Keil\RTE\Device\STM32L476RGTx\STCubeGenerated\Src\main.c&quot;::556</Name>
+        </__>
+       </BP.1>
       </Fetch>
      </Breakpoints>
      <Debug>
@@ -2112,24 +2188,7 @@
       </SFR>
       <SFR_Tree>
        <Reorder>0</Reorder>
-       <Selected>HSEON</Selected>
-       <SelectedItemPaths.0>
-        <Segments.0>
-         <Name></Name>
-        </Segments.0>
-        <Segments.1>
-         <Name>Cortex-M4, STM32L476xE</Name>
-        </Segments.1>
-        <Segments.2>
-         <Name>RCC</Name>
-        </Segments.2>
-        <Segments.3>
-         <Name>CR</Name>
-        </Segments.3>
-        <Segments.4>
-         <Name>HSEON</Name>
-        </Segments.4>
-       </SelectedItemPaths.0>
+       <Selected></Selected>
        <StateItem>
         <Name></Name>
         <Options>0</Options>
@@ -2137,165 +2196,125 @@
          <Name>Cortex-M4, STM32L476xE</Name>
          <Options>1</Options>
          <ChildItems.0>
-          <Name>Flash</Name>
-          <Options>4</Options>
-         </ChildItems.0>
-         <ChildItems.1>
-          <Name>DBGMCU</Name>
-          <Options>0</Options>
-         </ChildItems.1>
-         <ChildItems.2>
-          <Name>QUADSPI</Name>
-          <Options>0</Options>
-         </ChildItems.2>
-         <ChildItems.3>
-          <Name>RCC</Name>
+          <Name>TIM2</Name>
           <Options>1</Options>
           <ChildItems.0>
-           <Name>CR</Name>
-           <Options>5</Options>
+           <Name>CR1</Name>
+           <Options>1</Options>
+          </ChildItems.0>
+          <ChildItems.1>
+           <Name>DIER</Name>
+           <Options>1</Options>
            <ChildItems.0>
-            <Name>PLLSAI2RDY</Name>
+            <Name>CC4IE</Name>
             <Options>4</Options>
            </ChildItems.0>
            <ChildItems.1>
-            <Name>PLLSAI2ON</Name>
+            <Name>CC3IE</Name>
             <Options>0</Options>
            </ChildItems.1>
-           <ChildItems.10>
-            <Name>HSIASFS</Name>
-            <Options>0</Options>
-           </ChildItems.10>
-           <ChildItems.11>
-            <Name>HSIRDY</Name>
-            <Options>0</Options>
-           </ChildItems.11>
-           <ChildItems.12>
-            <Name>HSIKERON</Name>
-            <Options>0</Options>
-           </ChildItems.12>
-           <ChildItems.13>
-            <Name>HSION</Name>
-            <Options>0</Options>
-           </ChildItems.13>
-           <ChildItems.14>
-            <Name>MSIRANGE</Name>
-            <Options>0</Options>
-           </ChildItems.14>
-           <ChildItems.15>
-            <Name>MSIRGSEL</Name>
-            <Options>0</Options>
-           </ChildItems.15>
-           <ChildItems.16>
-            <Name>MSIPLLEN</Name>
-            <Options>0</Options>
-           </ChildItems.16>
-           <ChildItems.17>
-            <Name>MSIRDY</Name>
-            <Options>0</Options>
-           </ChildItems.17>
-           <ChildItems.18>
-            <Name>MSION</Name>
-            <Options>0</Options>
-           </ChildItems.18>
            <ChildItems.2>
-            <Name>PLLSAI1RDY</Name>
+            <Name>CC2IE</Name>
             <Options>0</Options>
            </ChildItems.2>
            <ChildItems.3>
-            <Name>PLLSAI1ON</Name>
+            <Name>CC1IE</Name>
             <Options>0</Options>
            </ChildItems.3>
            <ChildItems.4>
-            <Name>PLLRDY</Name>
+            <Name>UIE</Name>
+            <Options>0</Options>
+           </ChildItems.4>
+          </ChildItems.1>
+          <ChildItems.10>
+           <Name>PSC</Name>
+           <Options>0</Options>
+          </ChildItems.10>
+          <ChildItems.11>
+           <Name>ARR</Name>
+           <Options>0</Options>
+          </ChildItems.11>
+          <ChildItems.12>
+           <Name>CCR1</Name>
+           <Options>0</Options>
+          </ChildItems.12>
+          <ChildItems.13>
+           <Name>CCR2</Name>
+           <Options>0</Options>
+          </ChildItems.13>
+          <ChildItems.2>
+           <Name>SR</Name>
+           <Options>5</Options>
+           <ChildItems.0>
+            <Name>CC4OF</Name>
+            <Options>4</Options>
+           </ChildItems.0>
+           <ChildItems.1>
+            <Name>CC3OF</Name>
+            <Options>0</Options>
+           </ChildItems.1>
+           <ChildItems.2>
+            <Name>CC2OF</Name>
+            <Options>0</Options>
+           </ChildItems.2>
+           <ChildItems.3>
+            <Name>CC1OF</Name>
+            <Options>0</Options>
+           </ChildItems.3>
+           <ChildItems.4>
+            <Name>TIF</Name>
             <Options>0</Options>
            </ChildItems.4>
            <ChildItems.5>
-            <Name>PLLON</Name>
+            <Name>CC4IF</Name>
             <Options>0</Options>
            </ChildItems.5>
            <ChildItems.6>
-            <Name>CSSON</Name>
+            <Name>CC3IF</Name>
             <Options>0</Options>
            </ChildItems.6>
            <ChildItems.7>
-            <Name>HSEBYP</Name>
+            <Name>CC2IF</Name>
             <Options>0</Options>
            </ChildItems.7>
            <ChildItems.8>
-            <Name>HSERDY</Name>
+            <Name>CC1IF</Name>
             <Options>0</Options>
            </ChildItems.8>
            <ChildItems.9>
-            <Name>HSEON</Name>
+            <Name>UIF</Name>
             <Options>0</Options>
            </ChildItems.9>
-          </ChildItems.0>
-          <ChildItems.1>
-           <Name>ICSCR</Name>
-           <Options>0</Options>
-          </ChildItems.1>
-          <ChildItems.2>
-           <Name>CFGR</Name>
-           <Options>0</Options>
           </ChildItems.2>
           <ChildItems.3>
-           <Name>PLLCFGR</Name>
-           <Options>1</Options>
-           <ChildItems.0>
-            <Name>PLLR</Name>
-            <Options>4</Options>
-           </ChildItems.0>
-           <ChildItems.1>
-            <Name>PLLREN</Name>
-            <Options>0</Options>
-           </ChildItems.1>
-           <ChildItems.2>
-            <Name>PLLQ</Name>
-            <Options>0</Options>
-           </ChildItems.2>
-           <ChildItems.3>
-            <Name>PLLQEN</Name>
-            <Options>0</Options>
-           </ChildItems.3>
-           <ChildItems.4>
-            <Name>PLLP</Name>
-            <Options>0</Options>
-           </ChildItems.4>
-           <ChildItems.5>
-            <Name>PLLPEN</Name>
-            <Options>0</Options>
-           </ChildItems.5>
-           <ChildItems.6>
-            <Name>PLLN</Name>
-            <Options>0</Options>
-           </ChildItems.6>
-           <ChildItems.7>
-            <Name>PLLM</Name>
-            <Options>0</Options>
-           </ChildItems.7>
-           <ChildItems.8>
-            <Name>PLLSRC</Name>
-            <Options>0</Options>
-           </ChildItems.8>
+           <Name>EGR</Name>
+           <Options>0</Options>
           </ChildItems.3>
           <ChildItems.4>
-           <Name>PLLSAI1CFGR</Name>
+           <Name>CCMR1_Output</Name>
            <Options>0</Options>
           </ChildItems.4>
           <ChildItems.5>
-           <Name>PLLSAI2CFGR</Name>
+           <Name>CCMR1_Input</Name>
            <Options>0</Options>
           </ChildItems.5>
           <ChildItems.6>
-           <Name>CIER</Name>
+           <Name>CCMR2_Output</Name>
            <Options>0</Options>
           </ChildItems.6>
           <ChildItems.7>
-           <Name>CIFR</Name>
+           <Name>CCMR2_Input</Name>
            <Options>0</Options>
           </ChildItems.7>
-         </ChildItems.3>
+          <ChildItems.8>
+           <Name>CCER</Name>
+           <Options>0</Options>
+          </ChildItems.8>
+          <ChildItems.9>
+           <Name>CNT</Name>
+           <Options>0</Options>
+          </ChildItems.9>
+         </ChildItems.0>
         </ChildItems.0>
        </StateItem>
       </SFR_Tree>

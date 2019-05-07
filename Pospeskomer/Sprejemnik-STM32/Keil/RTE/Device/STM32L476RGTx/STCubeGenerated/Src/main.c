@@ -65,6 +65,8 @@
 /* Private variables ---------------------------------------------------------*/
 SPI_HandleTypeDef hspi1;
 
+TIM_HandleTypeDef htim2;
+
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
 
@@ -74,6 +76,7 @@ SPI_HandleTypeDef hspi1;
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_SPI1_Init(void);
+static void MX_TIM2_Init(void);
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
 
@@ -134,6 +137,7 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_SPI1_Init();
+  MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
   
   // Inizializiraj in splakni SPI buffer
@@ -142,12 +146,13 @@ int main(void)
 	HAL_SPI_Transmit(&hspi1, TxSPI, 6, 100);
   
   int i = 0;
+	int j = 0;
 	
 	
 	// Nastavi RX naslov za 0. pipo
 	//LSBajt gre prvi
 	TxSPI[0] = 0x0A | (1 << 5);
-	TxSPI[1] = 0x88;
+	TxSPI[1] = 0xE1;
 	TxSPI[2] = 0xF0;
 	TxSPI[3] = 0xF0;
 	TxSPI[4] = 0xE8;
@@ -217,9 +222,9 @@ int main(void)
 	HAL_SPI_Transmit(&hspi1, TxSPI, 2, 100);
 	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
 	
-	// Nastavi RX in vklopi
+	// Nastavi TX in vklopi
 	TxSPI[0] = 0x00 | (1 << 5);
-	TxSPI[1] = 0x0F;
+	TxSPI[1] = 0x0E;
 	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
 	HAL_SPI_Transmit(&hspi1, TxSPI, 2, 100);
 	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
@@ -233,7 +238,7 @@ int main(void)
 	
 	// Nastavi SETUP_RETR register
 	TxSPI[0] = 0x04 | (1 << 5);
-	TxSPI[1] = 0x5F;
+	TxSPI[1] = 0x2F;
 	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
 	HAL_SPI_Transmit(&hspi1, TxSPI, 2, 100);
 	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
@@ -263,18 +268,6 @@ int main(void)
 	HAL_SPI_Transmit(&hspi1, TxSPI, 1, 100);
 	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
 	
-	// 1. postavi PRIM_RX = 1
-	TxSPI[0] = 0x00 | (1 << 5);
-	TxSPI[1] = 0x0F;
-	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
-	HAL_SPI_Transmit(&hspi1, TxSPI, 2, 100);
-	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
-	
-	// 2. postavi CE=1
-	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_SET);
-	
-	HAL_Delay(1);
-	
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -285,6 +278,7 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 		i = 0;
+		j = 0;
 		
 		if(ijklm)
 		{
@@ -300,24 +294,20 @@ int main(void)
 			ijklm = 0;
 		}
 		
-		//TIM2->CR1 |= (1 << TIM_CR1_CEN_Pos);
-		sprejmiRadio();
-		//TIM2->CR1 &= ~(1 << TIM_CR1_CEN_Pos);
-		
-		//TIM2->CNT = 0;
+		if (j)
+		{
+			sprejmiRadio();
+		}
+
 		
 		accx = (test[1] << 8) | test[2];
 		accy = (test[3] << 8) | test[4];
 		accz = (test[5] << 8) | test[6];
 		
-		/*posljiRadio();
-		
 		if (i)
 		{
-			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
-			HAL_SPI_Transmit(&hspi1, TxSPI, 2, 100);
-			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
-		}*/
+			posljiRadio();
+		}
 				
 		
 
@@ -390,7 +380,7 @@ static void MX_SPI1_Init(void)
   hspi1.Instance = SPI1;
   hspi1.Init.Mode = SPI_MODE_MASTER;
   hspi1.Init.Direction = SPI_DIRECTION_2LINES;
-  hspi1.Init.DataSize = SPI_DATASIZE_4BIT;
+  hspi1.Init.DataSize = SPI_DATASIZE_8BIT;
   hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
   hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
   hspi1.Init.NSS = SPI_NSS_SOFT;
@@ -408,6 +398,51 @@ static void MX_SPI1_Init(void)
   /* USER CODE BEGIN SPI1_Init 2 */
 
   /* USER CODE END SPI1_Init 2 */
+
+}
+
+/**
+  * @brief TIM2 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM2_Init(void)
+{
+
+  /* USER CODE BEGIN TIM2_Init 0 */
+
+  /* USER CODE END TIM2_Init 0 */
+
+  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+
+  /* USER CODE BEGIN TIM2_Init 1 */
+
+  /* USER CODE END TIM2_Init 1 */
+  htim2.Instance = TIM2;
+  htim2.Init.Prescaler = 999;
+  htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim2.Init.Period = 80000;
+  htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim2, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim2, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM2_Init 2 */
+
+  /* USER CODE END TIM2_Init 2 */
 
 }
 
@@ -484,24 +519,24 @@ void SPI_poslji_bajt(uint8_t naslov, uint8_t vrednost)
 
 void sprejmiRadio()
 {
-	/*// 1. postavi PRIM_RX = 1
+	// 1. postavi PRIM_RX = 1
 	TxSPI[0] = 0x00 | (1 << 5);
 	TxSPI[1] = 0x0F;
 	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
 	HAL_SPI_Transmit(&hspi1, TxSPI, 2, 100);
 	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
 	
-	TxSPI[0] = 0x07 | (1 << 5);
+	/*TxSPI[0] = 0x07 | (1 << 5);
 	TxSPI[1] = 0x70;
 	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
 	HAL_SPI_Transmit(&hspi1, TxSPI, 2, 100);
-	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);*/
 	
 	// 2. postavi CE=1
 	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_SET);
 	
-	// 3. pocakaj 130 us
-	HAL_Delay(130);*/
+	// 3. pocakaj 1 ms
+	HAL_Delay(1);
 	
 	// 4. poslšam ali je kaj na liniji
 	
@@ -569,6 +604,7 @@ void posljiRadio()
 	HAL_SPI_Transmit(&hspi1, TxSPI, 2, 100);
 	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
 	
+	HAL_Delay(1);
 	
 	// 2. naloži podatke v pomnilnik
 	test[0] = 0xA0; // naslov pomnilnika
@@ -577,22 +613,16 @@ void posljiRadio()
 	test[3] = 0x56;
 	test[4] = 0x78;
 	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
-	HAL_SPI_Transmit(&hspi1, test, 33, 100);
+	HAL_SPI_Transmit(&hspi1, test, 15, 100);
 	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
-	
-	RxSPI[0] = 0x17;
-	RxSPI[1] = 0xFF;
-	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
-	HAL_SPI_Receive(&hspi1, RxSPI, 2, 100);
-	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
-	
+  
 	// 3. pošlji vsaj 10 us pulz na CE za prenos paketa
 	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_SET);
-	HAL_Delay(20);
+	HAL_Delay(15);
 	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_RESET);
-	
+  
 	// 4. ali so podatki prišli?
-	RxSPI[0] = 0x17;
+	RxSPI[0] = 0x08;
 	RxSPI[1] = 0xFF;
 	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
 	HAL_SPI_Receive(&hspi1, RxSPI, 2, 100);

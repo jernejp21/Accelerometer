@@ -32,13 +32,13 @@
 void SPI_MasterInit(void);
 void SPI_Transmit(const char cData);
 inline void SPI_SlaveInit(void);
-inline char SPI_Receive(const char cData);
+char SPI_Receive(const char cData);
 void I2C_Begin(void);
 inline void I2C_Transmit(const uint8_t slave_address, const uint8_t reg_address, const uint8_t data);
 inline uint8_t I2C_Read_one(const uint8_t slave_address, const uint8_t reg_address);
 inline void I2C_Read_array(const uint8_t slave_address, const uint8_t reg_address, const uint8_t len, uint8_t *arrayp);
 void Serial_begin(void);
-inline void Serial_write(const uint8_t data);
+void Serial_write(const uint8_t data);
 inline char Serial_read(void);
 
 
@@ -65,7 +65,7 @@ void SPI_MasterInit(void)
 	//SPCR = (1<<SPE)|(1<<MSTR);
 }
 
-void SPI_Transmit(char cData)
+void SPI_Transmit(const char cData)
 {
 	/* Start transmission */
 	SPDR = cData;
@@ -80,7 +80,7 @@ void SPI_SlaveInit(void)
 	/* Enable SPI */
 	SPCR = (1<<SPE);
 }
-char SPI_Receive(char cData)
+char SPI_Receive(const char cData)
 {
 	/* Start transmission */
 	SPDR = cData;
@@ -240,7 +240,7 @@ void Serial_begin(void)
     UCSR0C = (1 << UCSZ01) | (1 << UCSZ00);	//8-bit communication
 }
 
-inline void Serial_write(const uint8_t data)
+void Serial_write(const uint8_t data)
 {
     while(!(UCSR0A & (1<<UDRE0)));
     UDR0 = data;
