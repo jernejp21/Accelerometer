@@ -58,11 +58,15 @@ void SPI_MasterInit(void)
 	//SPCR = (1<<SPE)|(1<<MSTR)|(1<<SPR0);
 	
 	/* Enable SPI, Master, set clock rate fck/8 */
-	SPCR = (1<<SPE)|(1<<MSTR)|(1<<SPR0);
-	SPSR |= (1 << SPI2X);
+	//SPCR = (1<<SPE)|(1<<MSTR)|(1<<SPR0);
+	//SPSR |= (1 << SPI2X);
 
 	/* Enable SPI, Master, set clock rate fck/4 */	
+	SPCR = (1<<SPE)|(1<<MSTR);
+	
+	/* Enable SPI, Master, set clock rate fck/2 */
 	//SPCR = (1<<SPE)|(1<<MSTR);
+	//SPSR |= (1 << SPI2X);
 }
 
 void SPI_Transmit(const char cData)

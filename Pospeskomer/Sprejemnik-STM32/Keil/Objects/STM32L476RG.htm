@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\STM32L476RG.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\STM32L476RG.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Tue May 07 21:55:54 2019
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Sun May 12 10:45:22 2019
 <BR><P>
 <H3>Maximum Stack Usage =        192 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -841,7 +841,7 @@ Global Symbols
 <P><STRONG><a name="[7]"></a>UsageFault_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32l4xx_it.o(i.UsageFault_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32l476xx.o(RESET)
 </UL>
-<P><STRONG><a name="[6d]"></a>main</STRONG> (Thumb, 840 bytes, Stack size 0 bytes, main.o(i.main))
+<P><STRONG><a name="[6d]"></a>main</STRONG> (Thumb, 858 bytes, Stack size 0 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 192<LI>Call Chain = main &rArr; SystemClock_Config &rArr; HAL_RCC_OscConfig &rArr; HAL_InitTick &rArr; HAL_NVIC_SetPriority &rArr; __NVIC_SetPriority
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_Transmit
@@ -868,7 +868,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[a1]"></a>sprejmiRadio</STRONG> (Thumb, 296 bytes, Stack size 8 bytes, main.o(i.sprejmiRadio))
+<P><STRONG><a name="[a1]"></a>sprejmiRadio</STRONG> (Thumb, 306 bytes, Stack size 8 bytes, main.o(i.sprejmiRadio))
 <BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = sprejmiRadio &rArr; HAL_SPI_Receive &rArr; HAL_SPI_TransmitReceive &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_Transmit

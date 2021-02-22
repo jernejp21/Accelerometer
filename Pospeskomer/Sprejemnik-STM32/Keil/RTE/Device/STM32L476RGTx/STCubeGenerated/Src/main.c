@@ -104,6 +104,8 @@ int stevec1 = 5;
 
 int16_t podatki[2000];
 int ijklm = 0;
+int i = 0;
+int j = 0;
 
 
 /* USER CODE END 0 */
@@ -144,9 +146,6 @@ int main(void)
   HAL_SPI_Transmit(&hspi1, TxSPI, 6, 100);
 	HAL_SPI_Transmit(&hspi1, TxSPI, 6, 100);
 	HAL_SPI_Transmit(&hspi1, TxSPI, 6, 100);
-  
-  int i = 0;
-	int j = 0;
 	
 	
 	// Nastavi RX naslov za 0. pipo
@@ -278,10 +277,11 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 		i = 0;
-		j = 0;
+		j = 1;
 		
 		if(ijklm)
 		{
+			stevec1 = 0;
 			TIM2->DIER |= (1 << TIM_DIER_CC1IE_Pos);
 			TIM2->CR1 |= (1 << TIM_CR1_CEN_Pos);
 			
@@ -538,7 +538,7 @@ void sprejmiRadio()
 	// 3. pocakaj 1 ms
 	HAL_Delay(1);
 	
-	// 4. poslšam ali je kaj na liniji
+	// 4. poslušam ali je kaj na liniji
 	
 	RxSPI[0] = 0x17;
   RxSPI[1] = 0xFF;
@@ -566,6 +566,8 @@ void sprejmiRadio()
 		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
 		HAL_SPI_Receive(&hspi1, test, 15, 100);
 		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
+		
+		stevec1++;
 		
 		// 2. pocisti RX_DR IRQ zastavico
 		TxSPI[0] = 0x07 | (1 << 5);
@@ -618,7 +620,7 @@ void posljiRadio()
   
 	// 3. pošlji vsaj 10 us pulz na CE za prenos paketa
 	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_SET);
-	HAL_Delay(15);
+	HAL_Delay(20);
 	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_RESET);
   
 	// 4. ali so podatki prišli?

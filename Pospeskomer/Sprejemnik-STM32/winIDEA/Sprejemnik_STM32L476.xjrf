@@ -149,51 +149,51 @@
         </__.23>
         <__.24>
          <BookmarkList></BookmarkList>
-         <CaretPos>13234</CaretPos>
-         <Encoding>2</Encoding>
-         <FileName>C:\Keil_v5\ARM\PACK\Keil\STM32L4xx_DFP\2.1.0\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal.c</FileName>
-         <FileType>1</FileType>
-         <ScrollPos>330</ScrollPos>
-        </__.24>
-        <__.25>
-         <BookmarkList></BookmarkList>
          <CaretPos>24568</CaretPos>
          <Encoding>2</Encoding>
          <FileName>C:\Keil_v5\ARM\PACK\Keil\STM32L4xx_DFP\2.1.0\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_rcc.c</FileName>
          <FileType>1</FileType>
          <ScrollPos>554</ScrollPos>
-        </__.25>
-        <__.26>
+        </__.24>
+        <__.25>
          <BookmarkList></BookmarkList>
          <CaretPos>52281</CaretPos>
          <Encoding>2</Encoding>
          <FileName>C:\Keil_v5\ARM\PACK\Keil\STM32L4xx_DFP\2.1.0\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_spi.c</FileName>
          <FileType>1</FileType>
          <ScrollPos>1377</ScrollPos>
-        </__.26>
-        <__.27>
-         <BookmarkList></BookmarkList>
-         <CaretPos>9355</CaretPos>
-         <Encoding>2</Encoding>
-         <FileName>D:\Projekti\Pospeskomer\Sprejemnik-STM32\Keil\RTE\Device\STM32L476RGTx\STCubeGenerated\Src\main.c</FileName>
-         <FileType>1</FileType>
-         <ScrollPos>295</ScrollPos>
-        </__.27>
-        <__.28>
+        </__.25>
+        <__.26>
          <BookmarkList></BookmarkList>
          <CaretPos>11247</CaretPos>
          <Encoding>2</Encoding>
          <FileName>D:\Projekti\Pospeskomer\Sprejemnik-STM32\Keil\RTE\Device\STM32L476RGTx\startup_stm32l476xx.s</FileName>
          <FileType>0</FileType>
-         <ScrollPos>168</ScrollPos>
-        </__.28>
-        <__.29>
+         <ScrollPos>185</ScrollPos>
+        </__.26>
+        <__.27>
          <BookmarkList></BookmarkList>
          <CaretPos>18504</CaretPos>
          <Encoding>2</Encoding>
          <FileName>C:\Keil_v5\ARM\PACK\Keil\STM32L4xx_DFP\2.1.0\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_gpio.c</FileName>
          <FileType>1</FileType>
          <ScrollPos>442</ScrollPos>
+        </__.27>
+        <__.28>
+         <BookmarkList></BookmarkList>
+         <CaretPos>9339</CaretPos>
+         <Encoding>2</Encoding>
+         <FileName>D:\Projekti\Pospeskomer\Sprejemnik-STM32\Keil\RTE\Device\STM32L476RGTx\STCubeGenerated\Src\main.c</FileName>
+         <FileType>1</FileType>
+         <ScrollPos>275</ScrollPos>
+        </__.28>
+        <__.29>
+         <BookmarkList></BookmarkList>
+         <CaretPos>13216</CaretPos>
+         <Encoding>2</Encoding>
+         <FileName>C:\Keil_v5\ARM\PACK\Keil\STM32L4xx_DFP\2.1.0\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal.c</FileName>
+         <FileType>1</FileType>
+         <ScrollPos>330</ScrollPos>
         </__.29>
         <__.3>
          <BookmarkList></BookmarkList>
@@ -1036,32 +1036,40 @@
      <Documents.0>
       <ActiveDocument>
        <Maximized>True</Maximized>
-       <RelativeFileName>..\Keil\RTE\Device\STM32L476RGTx\STCubeGenerated\Src\main.c</RelativeFileName>
+       <RelativeFileName>..\Keil\RTE\Device\STM32L476RGTx\startup_stm32l476xx.s</RelativeFileName>
       </ActiveDocument>
       <Editor.0>
        <FileBarIndex>0</FileBarIndex>
+       <RectPosBottom>485</RectPosBottom>
+       <RectPosLeft>75</RectPosLeft>
+       <RectPosRight>466</RectPosRight>
+       <RectPosTop>75</RectPosTop>
+       <RelativeFileName>C:\Keil_v5\ARM\PACK\Keil\STM32L4xx_DFP\2.1.0\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal.c</RelativeFileName>
+      </Editor.0>
+      <Editor.1>
+       <FileBarIndex>1</FileBarIndex>
        <RectPosBottom>435</RectPosBottom>
        <RectPosLeft>25</RectPosLeft>
        <RectPosRight>416</RectPosRight>
        <RectPosTop>25</RectPosTop>
        <RelativeFileName>C:\Keil_v5\ARM\PACK\Keil\STM32L4xx_DFP\2.1.0\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_gpio.c</RelativeFileName>
-      </Editor.0>
-      <Editor.1>
-       <FileBarIndex>1</FileBarIndex>
+      </Editor.1>
+      <Editor.2>
+       <FileBarIndex>2</FileBarIndex>
        <RectPosBottom>598</RectPosBottom>
        <RectPosLeft>175</RectPosLeft>
        <RectPosRight>1183</RectPosRight>
        <RectPosTop>175</RectPosTop>
        <RelativeFileName>..\Keil\RTE\Device\STM32L476RGTx\startup_stm32l476xx.s</RelativeFileName>
-      </Editor.1>
-      <Editor.2>
-       <FileBarIndex>2</FileBarIndex>
+      </Editor.2>
+      <Editor.3>
+       <FileBarIndex>3</FileBarIndex>
        <RectPosBottom>335</RectPosBottom>
        <RectPosLeft>25</RectPosLeft>
        <RectPosRight>910</RectPosRight>
        <RectPosTop>25</RectPosTop>
        <RelativeFileName>..\Keil\RTE\Device\STM32L476RGTx\STCubeGenerated\Src\main.c</RelativeFileName>
-      </Editor.2>
+      </Editor.3>
       <EditorHistoryFile.0>
        <RelativeFileName>..\Keil\RTE\Device\STM32L476RGTx\startup_stm32l476xx.s</RelativeFileName>
       </EditorHistoryFile.0>
@@ -1082,7 +1090,7 @@
       <t>323</t>
      </Progress>
      <Watches>
-      <ActiveWatchPane>2</ActiveWatchPane>
+      <ActiveWatchPane>3</ActiveWatchPane>
       <Misc.0>
        <InitScript></InitScript>
       </Misc.0>
@@ -1271,7 +1279,7 @@
         </ExpressionDisplay>
        </Watch.2>
        <Watch.3>
-        <WatchName>@&quot;TIM2&quot;\CNT*1.0/80000</WatchName>
+        <WatchName>stevec1</WatchName>
         <ExpressionDisplay>
          <Color>0</Color>
          <ColorBack>8421376</ColorBack>
@@ -1283,7 +1291,7 @@
         </ExpressionDisplay>
        </Watch.3>
        <Watch.4>
-        <WatchName>stevec1</WatchName>
+        <WatchName>stevec</WatchName>
         <ExpressionDisplay>
          <Color>0</Color>
          <ColorBack>8421376</ColorBack>
@@ -1295,7 +1303,7 @@
         </ExpressionDisplay>
        </Watch.4>
        <Watch.5>
-        <WatchName>stevec</WatchName>
+        <WatchName>i</WatchName>
         <ExpressionDisplay>
          <Color>0</Color>
          <ColorBack>8421376</ColorBack>
@@ -1306,6 +1314,18 @@
          <Scale>0</Scale>
         </ExpressionDisplay>
        </Watch.5>
+       <Watch.6>
+        <WatchName>ijklm</WatchName>
+        <ExpressionDisplay>
+         <Color>0</Color>
+         <ColorBack>8421376</ColorBack>
+         <ColorText>0</ColorText>
+         <Enabled>0</Enabled>
+         <Hi type="D">100.0000000000000000</Hi>
+         <Lo type="D">0.0000000000000000</Lo>
+         <Scale>0</Scale>
+        </ExpressionDisplay>
+       </Watch.6>
       </WatchPane.3>
      </Watches>
      <Watches2>
@@ -1354,27 +1374,52 @@
       </Misc.3>
      </Watches4>
      <Workspace.0>
-      <AreHorz>1</AreHorz>
+      <AreHorz>0</AreHorz>
       <FullScreen>0</FullScreen>
       <Percent>0</Percent>
       <Type>0</Type>
       <TypeOfWnd>-1</TypeOfWnd>
       <DockRect.0>
-       <AreHorz>0</AreHorz>
-       <Percent>618</Percent>
+       <AreHorz>1</AreHorz>
+       <Percent>1096</Percent>
        <Type>0</Type>
        <TypeOfWnd>-1</TypeOfWnd>
        <DockRect.0>
-        <AreHorz>1</AreHorz>
-        <Percent>28</Percent>
-        <Type>2</Type>
+        <AreHorz>0</AreHorz>
+        <Percent>618</Percent>
+        <Type>0</Type>
         <TypeOfWnd>-1</TypeOfWnd>
         <DockRect.0>
          <AreHorz>1</AreHorz>
-         <Percent>227</Percent>
-         <strTypeOfWnd>File</strTypeOfWnd>
-         <Type>10</Type>
-         <TypeOfWnd>7</TypeOfWnd>
+         <Percent>28</Percent>
+         <Type>2</Type>
+         <TypeOfWnd>-1</TypeOfWnd>
+         <DockRect.0>
+          <AreHorz>1</AreHorz>
+          <Percent>227</Percent>
+          <strTypeOfWnd>File</strTypeOfWnd>
+          <Type>10</Type>
+          <TypeOfWnd>7</TypeOfWnd>
+         </DockRect.0>
+         <DockRect.1>
+          <AreHorz>1</AreHorz>
+          <Percent>2</Percent>
+          <Type>6</Type>
+          <TypeOfWnd>-1</TypeOfWnd>
+         </DockRect.1>
+         <DockRect.2>
+          <AreHorz>1</AreHorz>
+          <Percent>317</Percent>
+          <strTypeOfWnd>View</strTypeOfWnd>
+          <Type>10</Type>
+          <TypeOfWnd>8</TypeOfWnd>
+         </DockRect.2>
+         <DockRect.3>
+          <AreHorz>1</AreHorz>
+          <Percent>0</Percent>
+          <Type>6</Type>
+          <TypeOfWnd>-1</TypeOfWnd>
+         </DockRect.3>
         </DockRect.0>
         <DockRect.1>
          <AreHorz>1</AreHorz>
@@ -1384,35 +1429,107 @@
         </DockRect.1>
         <DockRect.2>
          <AreHorz>1</AreHorz>
-         <Percent>317</Percent>
-         <strTypeOfWnd>View</strTypeOfWnd>
-         <Type>10</Type>
-         <TypeOfWnd>8</TypeOfWnd>
+         <Percent>200</Percent>
+         <Type>0</Type>
+         <TypeOfWnd>-1</TypeOfWnd>
+         <DockRect.0>
+          <AreHorz>1</AreHorz>
+          <Percent>200</Percent>
+          <strTypeOfWnd>Project Workspace</strTypeOfWnd>
+          <Type>0</Type>
+          <TypeOfWnd>1</TypeOfWnd>
+         </DockRect.0>
+         <DockRect.1>
+          <AreHorz>1</AreHorz>
+          <Percent>5</Percent>
+          <Type>6</Type>
+          <TypeOfWnd>-1</TypeOfWnd>
+         </DockRect.1>
+         <DockRect.2>
+          <AreHorz>1</AreHorz>
+          <Percent>28</Percent>
+          <strTypeOfWnd>Project</strTypeOfWnd>
+          <Type>10</Type>
+          <TypeOfWnd>9</TypeOfWnd>
+         </DockRect.2>
+         <DockRect.3>
+          <AreHorz>1</AreHorz>
+          <Percent>0</Percent>
+          <Type>6</Type>
+          <TypeOfWnd>-1</TypeOfWnd>
+         </DockRect.3>
         </DockRect.2>
         <DockRect.3>
+         <AreHorz>1</AreHorz>
+         <Percent>5</Percent>
+         <Type>6</Type>
+         <TypeOfWnd>-1</TypeOfWnd>
+        </DockRect.3>
+        <DockRect.4>
+         <AreHorz>1</AreHorz>
+         <Percent>28</Percent>
+         <strTypeOfWnd>Debug</strTypeOfWnd>
+         <Type>10</Type>
+         <TypeOfWnd>10</TypeOfWnd>
+        </DockRect.4>
+        <DockRect.5>
+         <AreHorz>1</AreHorz>
+         <Percent>2</Percent>
+         <Type>6</Type>
+         <TypeOfWnd>-1</TypeOfWnd>
+        </DockRect.5>
+        <DockRect.6>
+         <AreHorz>1</AreHorz>
+         <Percent>600</Percent>
+         <Type>1</Type>
+         <TypeOfWnd>-2</TypeOfWnd>
+        </DockRect.6>
+        <DockRect.7>
          <AreHorz>1</AreHorz>
          <Percent>0</Percent>
          <Type>6</Type>
          <TypeOfWnd>-1</TypeOfWnd>
-        </DockRect.3>
+        </DockRect.7>
        </DockRect.0>
        <DockRect.1>
         <AreHorz>1</AreHorz>
-        <Percent>2</Percent>
+        <Percent>5</Percent>
         <Type>6</Type>
         <TypeOfWnd>-1</TypeOfWnd>
        </DockRect.1>
        <DockRect.2>
-        <AreHorz>1</AreHorz>
-        <Percent>200</Percent>
+        <AreHorz>0</AreHorz>
+        <Percent>303</Percent>
         <Type>0</Type>
         <TypeOfWnd>-1</TypeOfWnd>
         <DockRect.0>
          <AreHorz>1</AreHorz>
-         <Percent>200</Percent>
-         <strTypeOfWnd>Project Workspace</strTypeOfWnd>
+         <Percent>1015</Percent>
+         <strTypeOfWnd>Watch</strTypeOfWnd>
          <Type>0</Type>
-         <TypeOfWnd>1</TypeOfWnd>
+         <TypeOfWnd>2</TypeOfWnd>
+         <Data>
+          <Columns.0>
+           <Pos type="D">0.0000000000000000</Pos>
+           <Width>236</Width>
+          </Columns.0>
+          <Columns.1>
+           <Pos type="D">29.2803970223325045</Pos>
+           <Width>127</Width>
+          </Columns.1>
+          <Columns.2>
+           <Pos type="D">45.0372208436724577</Pos>
+           <Width>151</Width>
+          </Columns.2>
+          <Columns.3>
+           <Pos type="D">63.7717121588089313</Pos>
+           <Width>238</Width>
+          </Columns.3>
+          <Columns.4>
+           <Pos type="D">93.3002481389578122</Pos>
+           <Width>54</Width>
+          </Columns.4>
+         </Data>
         </DockRect.0>
         <DockRect.1>
          <AreHorz>1</AreHorz>
@@ -1422,10 +1539,32 @@
         </DockRect.1>
         <DockRect.2>
          <AreHorz>1</AreHorz>
-         <Percent>28</Percent>
-         <strTypeOfWnd>Project</strTypeOfWnd>
-         <Type>10</Type>
-         <TypeOfWnd>9</TypeOfWnd>
+         <Percent>660</Percent>
+         <strTypeOfWnd>Variables</strTypeOfWnd>
+         <Type>0</Type>
+         <TypeOfWnd>3</TypeOfWnd>
+         <Data>
+          <Columns.0>
+           <Pos type="D">0.0000000000000000</Pos>
+           <Width>180</Width>
+          </Columns.0>
+          <Columns.1>
+           <Pos type="D">34.2857142857142847</Pos>
+           <Width>80</Width>
+          </Columns.1>
+          <Columns.2>
+           <Pos type="D">49.5238095238095255</Pos>
+           <Width>80</Width>
+          </Columns.2>
+          <Columns.3>
+           <Pos type="D">64.7619047619047592</Pos>
+           <Width>140</Width>
+          </Columns.3>
+          <Columns.4>
+           <Pos type="D">91.4285714285714306</Pos>
+           <Width>45</Width>
+          </Columns.4>
+         </Data>
         </DockRect.2>
         <DockRect.3>
          <AreHorz>1</AreHorz>
@@ -1436,35 +1575,10 @@
        </DockRect.2>
        <DockRect.3>
         <AreHorz>1</AreHorz>
-        <Percent>5</Percent>
-        <Type>6</Type>
-        <TypeOfWnd>-1</TypeOfWnd>
-       </DockRect.3>
-       <DockRect.4>
-        <AreHorz>1</AreHorz>
-        <Percent>28</Percent>
-        <strTypeOfWnd>Debug</strTypeOfWnd>
-        <Type>10</Type>
-        <TypeOfWnd>10</TypeOfWnd>
-       </DockRect.4>
-       <DockRect.5>
-        <AreHorz>1</AreHorz>
-        <Percent>2</Percent>
-        <Type>6</Type>
-        <TypeOfWnd>-1</TypeOfWnd>
-       </DockRect.5>
-       <DockRect.6>
-        <AreHorz>1</AreHorz>
-        <Percent>600</Percent>
-        <Type>1</Type>
-        <TypeOfWnd>-2</TypeOfWnd>
-       </DockRect.6>
-       <DockRect.7>
-        <AreHorz>1</AreHorz>
         <Percent>0</Percent>
         <Type>6</Type>
         <TypeOfWnd>-1</TypeOfWnd>
-       </DockRect.7>
+       </DockRect.3>
       </DockRect.0>
       <DockRect.1>
        <AreHorz>1</AreHorz>
@@ -1473,80 +1587,26 @@
        <TypeOfWnd>-1</TypeOfWnd>
       </DockRect.1>
       <DockRect.2>
-       <AreHorz>0</AreHorz>
-       <Percent>303</Percent>
+       <AreHorz>1</AreHorz>
+       <Percent>274</Percent>
+       <strTypeOfWnd>SFR</strTypeOfWnd>
        <Type>0</Type>
-       <TypeOfWnd>-1</TypeOfWnd>
-       <DockRect.0>
-        <AreHorz>1</AreHorz>
-        <Percent>1015</Percent>
-        <strTypeOfWnd>Watch</strTypeOfWnd>
-        <Type>0</Type>
-        <TypeOfWnd>2</TypeOfWnd>
-        <Data>
-         <Columns.0>
-          <Pos type="D">0.0000000000000000</Pos>
-          <Width>236</Width>
-         </Columns.0>
-         <Columns.1>
-          <Pos type="D">23.2971372161895367</Pos>
-          <Width>127</Width>
-         </Columns.1>
-         <Columns.2>
-          <Pos type="D">35.8341559723593264</Pos>
-          <Width>151</Width>
-         </Columns.2>
-         <Columns.3>
-          <Pos type="D">50.7403751233958573</Pos>
-          <Width>238</Width>
-         </Columns.3>
-         <Columns.4>
-          <Pos type="D">74.2349457058242876</Pos>
-          <Width>261</Width>
-         </Columns.4>
-        </Data>
-       </DockRect.0>
-       <DockRect.1>
-        <AreHorz>1</AreHorz>
-        <Percent>5</Percent>
-        <Type>6</Type>
-        <TypeOfWnd>-1</TypeOfWnd>
-       </DockRect.1>
-       <DockRect.2>
-        <AreHorz>1</AreHorz>
-        <Percent>660</Percent>
-        <strTypeOfWnd>Variables</strTypeOfWnd>
-        <Type>0</Type>
-        <TypeOfWnd>3</TypeOfWnd>
-        <Data>
-         <Columns.0>
-          <Pos type="D">0.0000000000000000</Pos>
-          <Width>180</Width>
-         </Columns.0>
-         <Columns.1>
-          <Pos type="D">27.3556231003039514</Pos>
-          <Width>80</Width>
-         </Columns.1>
-         <Columns.2>
-          <Pos type="D">39.5136778115501528</Pos>
-          <Width>80</Width>
-         </Columns.2>
-         <Columns.3>
-          <Pos type="D">51.6717325227963542</Pos>
-          <Width>140</Width>
-         </Columns.3>
-         <Columns.4>
-          <Pos type="D">72.9483282674772084</Pos>
-          <Width>178</Width>
-         </Columns.4>
-        </Data>
-       </DockRect.2>
-       <DockRect.3>
-        <AreHorz>1</AreHorz>
-        <Percent>0</Percent>
-        <Type>6</Type>
-        <TypeOfWnd>-1</TypeOfWnd>
-       </DockRect.3>
+       <TypeOfWnd>12</TypeOfWnd>
+       <Data>
+        <SFRPane>
+         <Tree>
+          <HeaderWidth.0>200</HeaderWidth.0>
+          <HeaderWidth.1>100</HeaderWidth.1>
+          <HeaderWidth.2>400</HeaderWidth.2>
+          <HeaderWidth.3>100</HeaderWidth.3>
+          <HeaderWidth.4>400</HeaderWidth.4>
+         </Tree>
+        </SFRPane>
+        <WndData>
+         <Custom>0</Custom>
+         <strCustom></strCustom>
+        </WndData>
+       </Data>
       </DockRect.2>
       <DockRect.3>
        <AreHorz>1</AreHorz>
@@ -1561,32 +1621,6 @@
       <Fetch>
        <Beep>False</Beep>
        <DisplayMessage>False</DisplayMessage>
-       <BP.0>
-        <__>
-         <ActionEnabled>False</ActionEnabled>
-         <ActionScript></ActionScript>
-         <ActionScriptParams></ActionScriptParams>
-         <ActionShow>False</ActionShow>
-         <Active>True</Active>
-         <Condition></Condition>
-         <Condition_Count>0</Condition_Count>
-         <ConditionEnabled>False</ConditionEnabled>
-         <Name>&quot;..\Keil\RTE\Device\STM32L476RGTx\STCubeGenerated\Src\main.c&quot;::297</Name>
-        </__>
-       </BP.0>
-       <BP.1>
-        <__>
-         <ActionEnabled>False</ActionEnabled>
-         <ActionScript></ActionScript>
-         <ActionScriptParams></ActionScriptParams>
-         <ActionShow>False</ActionShow>
-         <Active>True</Active>
-         <Condition></Condition>
-         <Condition_Count>0</Condition_Count>
-         <ConditionEnabled>False</ConditionEnabled>
-         <Name>&quot;..\Keil\RTE\Device\STM32L476RGTx\STCubeGenerated\Src\main.c&quot;::556</Name>
-        </__>
-       </BP.1>
       </Fetch>
      </Breakpoints>
      <Debug>
@@ -1751,7 +1785,7 @@
        <BinaryDisplay>0</BinaryDisplay>
        <CharArraysAsString>1</CharArraysAsString>
        <CharDisplay>2</CharDisplay>
-       <DefaultHex>True</DefaultHex>
+       <DefaultHex>False</DefaultHex>
        <DereferenceStringPointers>0</DereferenceStringPointers>
        <DisplayCollapsedValues>1</DisplayCollapsedValues>
        <DisplayPointerMemArea>0</DisplayPointerMemArea>
@@ -2242,6 +2276,26 @@
            <Name>CCR2</Name>
            <Options>0</Options>
           </ChildItems.13>
+          <ChildItems.14>
+           <Name>CCR3</Name>
+           <Options>0</Options>
+          </ChildItems.14>
+          <ChildItems.15>
+           <Name>CCR4</Name>
+           <Options>0</Options>
+          </ChildItems.15>
+          <ChildItems.16>
+           <Name>DCR</Name>
+           <Options>0</Options>
+          </ChildItems.16>
+          <ChildItems.17>
+           <Name>DMAR</Name>
+           <Options>0</Options>
+          </ChildItems.17>
+          <ChildItems.18>
+           <Name>OR</Name>
+           <Options>0</Options>
+          </ChildItems.18>
           <ChildItems.2>
            <Name>SR</Name>
            <Options>5</Options>
@@ -2315,6 +2369,14 @@
            <Options>0</Options>
           </ChildItems.9>
          </ChildItems.0>
+         <ChildItems.1>
+          <Name>TIM3</Name>
+          <Options>4</Options>
+         </ChildItems.1>
+         <ChildItems.2>
+          <Name>TIM4</Name>
+          <Options>0</Options>
+         </ChildItems.2>
         </ChildItems.0>
        </StateItem>
       </SFR_Tree>

@@ -1815,9 +1815,9 @@
       <ActiveTab>0</ActiveTab>
       <Doc>
         <Name>.\RTE\Device\STM32L476RGTx\STCubeGenerated\Src\main.c</Name>
-        <ColumnNumber>10</ColumnNumber>
-        <TopLine>251</TopLine>
-        <CurrentLine>281</CurrentLine>
+        <ColumnNumber>18</ColumnNumber>
+        <TopLine>270</TopLine>
+        <CurrentLine>284</CurrentLine>
         <Folding>1</Folding>
         <ContractedFolders></ContractedFolders>
         <PaneID>0</PaneID>

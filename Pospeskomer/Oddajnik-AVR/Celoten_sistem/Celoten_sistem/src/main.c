@@ -55,23 +55,15 @@
 #define PERIODA 1000 //1000 ciklov števca je 1 ms
 
 // Funkcije za debagiranje
-void printWord(int16_t word);
+void printWord(uint8_t word);
 
 void sist_init(void);
-void dolocim_cas(uint16_t cas_za_izvedbo);
 void poslji_nastavitve(void);
-uint8_t poslusaj_nRF(void);
-uint8_t preberem_podatke(void);
 
 void radio_init(char *sprejemnik, char *oddajnik);
 void radio_poslji(uint8_t *paket);
 void radio_sprejmi(void);
 
-volatile unsigned int imam_cas = 1;
-volatile unsigned int trenutni_cas;
-uint8_t cakalna_vrsta = 0;
-volatile unsigned int TX = 0;
-uint8_t stevilo_nastavitev = 0;
 uint8_t nastavitve[14];
 uint8_t paket[14];
 uint8_t status;
@@ -83,7 +75,7 @@ char sprejemnik[5] = {0xE1, 0xF0, 0xF0, 0xE8, 0xE8};
 
 
 // Funkcije za debagiranje
-void printWord(int16_t word)
+void printWord(uint8_t word)
 {
 	//transmiteByte('0'+(word/1000000000));		//za 32 bit števila
 	//transmiteByte('0'+(word/100000000)%10);
@@ -91,7 +83,7 @@ void printWord(int16_t word)
 	//transmiteByte('0'+(word/1000000)%10);
 	//transmiteByte('0'+(word/100000)%10);
 
-	if (word > 0)
+	/*if (word > 0)
 	{
 		Serial_write('0' + (word / 10000) % 10); // za 16 bitna števila
 		Serial_write('0' + ((word / 1000) % 10));
@@ -108,17 +100,26 @@ void printWord(int16_t word)
 		Serial_write('0' + ((word / 100) % 10));
 		Serial_write('0' + ((word / 10) % 10));
 		Serial_write('0' + (word % 10));
-	}
+	}  */
+	
+	Serial_write('0' + ((word / 100) % 10)); // za 8 bitna števila
+	Serial_write('0' + ((word / 10) % 10));
+	Serial_write('0' + (word % 10));
 }
 //---------------------------------------------------------------------------------
 
 // Prekinitvena rutina.
 ISR(TIMER1_COMPA_vect)
 {
+	// prekinitvena rutina za ledico na pinu D3 (PD3)
+	//PORTD ^= (1 << LED);
+	
 	// Preberi podatke s pospeškomera.
 	// Preberem Ax, Ay, Az, fix, fiy, fiz in T.
 	// Vsak parameter je 16 bitno predznačeno število - int16_t, pri čemer
 	// je sestavljen iz dveh 8-bitnih števil.
+	
+	PORTD |= (1 << 7);
 	RESET_CS_MPU;
 	SPI_Transmit(0x3B | (1 << 7));
 	paket[0] = SPI_Receive(0);
@@ -146,10 +147,7 @@ ISR(TIMER1_COMPA_vect)
 	
 	SET_CE;
 	
-	// prekinitvena rutina za ledico na pinu D3 (PD3)
-	PORTD ^= (1 << LED);
-	imam_cas = 1;
-	
+	PORTD &= ~(1 << 7);
 }
 
 ISR(INT0_vect)
@@ -157,26 +155,24 @@ ISR(INT0_vect)
 	//Najprej izklopim prikinitev za pošiljanje podatkov.
 	TCCR1B &= ~(1 << CS11);	//izklop timerja 1
 	TCNT1 = 0;
+	PORTD |= (1 << 7);
 	
-	//radio_sprejmi();
-	//poslji_nastavitve();
+	radio_sprejmi();
+	poslji_nastavitve();
 	
-	//Pobrišem RX_DR bit
+	/*//Pobrišem RX_DR bit
 	RESET_CS_NRF;
 	SPI_Transmit(0x07 | (1 << 5));
 	SPI_Transmit(0x40);
 	SET_CS_NRF;
 	
-	PORTD |= (1 << 7);
-	_delay_us(200);
-	PORTD &= ~(1 << 7);
-	
 	//Splaknem RX buffer
 	RESET_CS_NRF;
 	SPI_Transmit(0xE2);
-	SET_CS_NRF;
+	SET_CS_NRF;*/
 	
 	//Serial_write('I');Serial_write('N');Serial_write('T');Serial_write('0');Serial_write('\n');
+	PORTD &= ~(1 << 7);
 	
 	//Ko vse nastavin, spet vklopim prekinitev za pošiljanje podatkov
 	//vsako mili sekundo.
@@ -190,11 +186,21 @@ int main(void)
 	CLKPR = 0x80;
 	CLKPR = (1 << 0);
 	
-	Serial_begin();
+	//Ugasi periferije
+	//Ugasni analogni komperator
+	ACSR |= (1 << ACD);
+	// Ugasnem PRTWI, PRTIM1, PRTIM2, PRUSART0 in PRADC
+	PRR = 0xE3;
+	//Postavim vse pull up upore za GPIO pine, ki jih ne uporabljam
+	PORTB = 0xFF;
+	PORTC = 0xFF;
+	PORTD = 0xFF;
+	
+	//Serial_begin();
 	DDRD |= (1 << 7); //pin D7 (PD7)
 	
 
-	Serial_write('b');
+	//Serial_write('b');
 	//Inizializacija
 	sist_init();
 	
@@ -206,11 +212,8 @@ int main(void)
 	//debagiranje
 
 	//glavni program
-	TX = 0;
-
-	stevilo_nastavitev = 0;
 	
-	Serial_write('i');
+	//Serial_write('i');
 	TCCR1B |= (1 << CS11);	//vklop timerja 1, prescale 8
 	
 	SET_CE;
@@ -237,13 +240,10 @@ void sist_init()
 	OCR1A = PERIODA;			 // compare register
 	TIMSK1 |= (1 << OCIE1A); // vklopi prekinitev za TIM1, COMP A
 	
-	Serial_write('a');
 	//Zunanja prekinitev na pinu IRQ (PD2). Če pride kaj na sprejemnik,
 	//spremenim nastavitve.
 	EICRA |= (1 << ISC01); //prekinitev na padajočem robu.
 	EIMSK |= (1 << INT0); //aktiviram zunanjo prekinitev INT0 na pinu PD2.
-
-	Serial_write('a');
 
 	SET_CS_MPU; // postavi CS pin za MPU v visoko stanje
 	SET_CS_NRF; // postavi CS pin za nRF v visoko stanje
@@ -360,7 +360,7 @@ void radio_poslji(uint8_t *paket)
 	SPI_Transmit(0x3E);
 	SET_CS_NRF;
 	
-	_delay_us(150);
+	_delay_us(130);
 
 	//pobri�em bite RX_DR, TX_DS in MAX_RT
 	RESET_CS_NRF;
@@ -380,7 +380,7 @@ void radio_poslji(uint8_t *paket)
 
 	// 3. po�lji vsaj 10 us pulz na CE za prenos paketa
 	SET_CE;
-	_delay_us(300);
+	_delay_us(250);
 	RESET_CE;
 	
 	// 4. ali so podatki pri�li?
@@ -428,7 +428,7 @@ void radio_sprejmi()
 	nastavitve[13] = SPI_Receive(0);
 	SET_CS_NRF;
 	
-	// 2. pocisti RX_DR IRQ zastavico
+	// 2. počisti RX_DR IRQ zastavico
 	RESET_CS_NRF;
 	SPI_Transmit(0x07 | (1 << 5));
 	SPI_Transmit(0x70);
@@ -443,34 +443,11 @@ void radio_sprejmi()
 	
 }
 
-void dolocim_cas(uint16_t cas_za_izvedbo)
-{
-	// Funkcija sprejema parameter koliko časa se izvaja sledeča funkcija. Čas
-	// je v mikro sekundah.
-	// Funkcija postavi "imam_cas" na 1, če lahko v preostalem času do prekinitve
-	// izvedem sledečo funkcijo.
-	// Funkcija postavi "imam_cas" na 0, če ne morem v preostalem času do
-	// prekinitve izvesti sledeče funkcije.
-	//
-	// Funkcija nič ne vrača, samo spreminja "imam_cas".
-	
-	trenutni_cas = TCNT1;
-
-	if (cas_za_izvedbo < (PERIODA - trenutni_cas))
-	{
-		imam_cas = 1;
-	}
-	else
-	{
-		imam_cas = 0;
-	}
-}
-
 void poslji_nastavitve()
 {
 	// funkcija ničesar ne vrača.
-	int i = 0;
-	for (i = 0; i < 15; i=i+2)
+	//int i = 0;
+	/*for (i = 0; i < 14; i=i+2)
 	{
 		if (nastavitve[i] != 0xFF)
 		{
@@ -491,32 +468,20 @@ void poslji_nastavitve()
 				SET_CS_NRF;
 			}
 		}
-	}
-}
-
-uint8_t poslusaj_nRF()
-{
-	int podatki_so = 0;
-	// Funkcija posluša, če je od sprejemnika pršla kakšna nastavitev.
+	} */
+	/*Serial_write('N');
+	Serial_write('a');
+	Serial_write('s');
+	Serial_write('t');
+	Serial_write(':');
+	Serial_write('\n');
 	
-	if (Serial_read() == 's')
+	for (i = 0; i < 14; i++)
 	{
-		podatki_so = 1;
-		Serial_write('P');
+		printWord(nastavitve[i]);
+		Serial_write('\n');
 	}
-
-	return podatki_so;
-}
-
-uint8_t preberem_podatke()
-{
-	// Nastavitve se shranijo v vektor "nastavitve". Vedno se prebere 14 bajtov.
-	// To je 7 nastavitev (naslov, vrednost, naslov, vrednost...). Ni nujno, da
-	// je vedno 7 nastavitev. Določim tudi "stevilo_nastavitev".
-
-	// funkcija vrača število nastavitev
 	
-	Serial_write('n');
-
-	return 5;
+	Serial_write('\n');	*/
+	
 }
