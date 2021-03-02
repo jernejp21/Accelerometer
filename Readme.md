@@ -11,6 +11,8 @@ Wireless accelerometer is a device, consisted of 2 pieces. One piece is sender (
 
 Device has sampling rate 1000 Hz.
 
+![Sender PCB](Sender-AVR\Product_image\accelerometer.jpg)
+
 ## Receiver - STM32
 
 - Receiver is a Nucle32 board powered by SMT32L476RG.
