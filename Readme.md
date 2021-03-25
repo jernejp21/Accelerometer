@@ -13,7 +13,7 @@ Device has sampling rate 1000 Hz.
 
 ![Sender PCB](Sender-AVR/Product_image/accelerometer.jpg)
 
-## Receiver - STM32
+## Receiver - STM
 
 - Receiver is a Nucle32 board powered by SMT32L476RG.
 - It uses the same wireless communication device as sender.
